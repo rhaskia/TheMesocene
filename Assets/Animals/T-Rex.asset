@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b2e271b7ff82a408599ba51ef93ecf, type: 3}
+  m_Name: T-Rex
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 21300000, guid: d5549d8e8bf3d26419c07539ea9bbd5a, type: 3}
+  WalkAnimSide:
+  - {fileID: 21300000, guid: d749ec0b8bdcab24a8bed9badb923280, type: 3}
+  - {fileID: 21300000, guid: 38d72c5c6f18f9241a6494585771c951, type: 3}
+  - {fileID: 21300000, guid: cf07f6e262d65544cadab6414953ca8c, type: 3}
+  - {fileID: 21300000, guid: f53a00b4cb0f95143ad6dbb971d137e9, type: 3}
+  - {fileID: 21300000, guid: 1c206cf9e3a8e4c49ac758d4fbb515de, type: 3}
+  - {fileID: 21300000, guid: 57887e37f37faab4c897063072b9f70c, type: 3}
+  - {fileID: 21300000, guid: 295d55e3e611b4d4abb16c7f39aa3ca1, type: 3}
+  - {fileID: 21300000, guid: 02591a567bd6e7446b064b887f65ed3c, type: 3}
+  - {fileID: 21300000, guid: 5902de8a7d623c448a26ed503d421b1e, type: 3}
+  - {fileID: 21300000, guid: d5549d8e8bf3d26419c07539ea9bbd5a, type: 3}
+  - {fileID: 21300000, guid: 1ede71caf3b944a448e258ee0bde0b65, type: 3}
+  - {fileID: 21300000, guid: 08648e220b5250d4582af68100588f3f, type: 3}
+  - {fileID: 21300000, guid: 567287e0725bfc84582e939d97635418, type: 3}
+  WalkAnimFront: []
+  WalkAnimBack: []
+  WalkAnimSpeed: 0.1
+  RunAnimSide: []
+  RunAnimFront: []
+  RunAnimBack: []
+  RunAnimSpeed: 0
+  canJump: 0
+  JumpAnimSide: []
+  JumpAnimFront: []
+  JumpAnimBack: []
+  JumpAnimSpeed: 0
+  canGlide: 1
+  GlideAnimSide: []
+  GlideAnimFront: []
+  GlideAnimBack: []
+  GlideAnimSpeed: 0
+  canFly: 0
+  FlyAnimSide: []
+  FlyAnimFront: []
+  FlyAnimBack: []
+  FlyAnimSpeed: 0
+  RestAnimSide: []
+  RestAnimFront: []
+  RestAnimBack: []
+  RestAnimSpeed: 0
+  SleepAnimSide: []
+  SleepAnimFront: []
+  SleepAnimBack: []
+  SleepAnimSpeed: 0
+  EatAnimSide: []
+  EatAnimFront: []
+  EatAnimBack: []
+  EatAnimSpeed: 0
+  DrinkAnimSide: []
+  DrinkAnimFront: []
+  DrinkAnimBack: []
+  DrinkAnimSpeed: 0
+  LMBAnimSide: []
+  LMBAnimFront: []
+  LMBAnimBack: []
+  LMBAnimSpeed: 0
+  RMBAnimSide: []
+  RMBAnimFront: []
+  RMBAnimBack: []
+  RMBAnimSpeed: 0
+  LimpAnimSide: []
+  LimpAnimFront: []
+  LimpAnimBack: []
+  LimpAnimSpeed: 0
+  DeathAnimSide: []
+  DeathAnimFront: []
+  DeathAnimBack: []
+  DeathAnimSpeed: 0
+  IdleAnimSide:
+  - {fileID: 21300000, guid: 1ede71caf3b944a448e258ee0bde0b65, type: 3}
+  - {fileID: 21300000, guid: 1ede71caf3b944a448e258ee0bde0b65, type: 3}
+  IdleAnimFront: []
+  IdleAnimBack: []
+  IdleAnimSpeed: 0.1
