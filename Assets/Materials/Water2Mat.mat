@@ -7,22 +7,21 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: grass
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_ShaderKeywords: _PARALLAXMAP
+  m_Name: Water2Mat
+  m_Shader: {fileID: -6465566751694194690, guid: 4f43f6f77ebbb5546b96ce494997174e, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
-  stringTagMap:
-    RenderType: Opaque
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 7a490b0d6e7d098478ffb6ed02a2deb7, type: 3}
-        m_Scale: {x: 10, y: 10}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
@@ -45,8 +44,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7a490b0d6e7d098478ffb6ed02a2deb7, type: 3}
-        m_Scale: {x: 10, y: 10}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -57,7 +56,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: 0893a62ee4bb80d4d8ac42185ccf1b77, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -77,6 +76,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_0381426778d5488cb13d9346cc781667: 0.001
+    - Vector1_14a29e5cebe04b91b35e832a12905765: 1
+    - Vector1_1e7514a305ab42b4ba85e4fea923e501: 500
+    - Vector1_241161d7c1c144178906788ba7a5881b: 1
+    - Vector1_6bd5ed166631406594eb13f144e43fce: 3.25
+    - Vector1_9532384628c544558467423cf9cb3616: 0.2
+    - Vector1_b297a11555634fd2998da8e843e042c5: 100
+    - Vector1_f48601b7c3e3406fb4e0ce3de8dbbd85: 0.05
+    - Vector1_fb9019b54a0540f79fad2871ed5d5469: 2
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -91,12 +99,12 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Metallic: 0.01
+    - _Metallic: 0
     - _OcclusionStrength: 1
-    - _Parallax: 0.0506
+    - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0
+    - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -104,12 +112,15 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.75687194, g: 0.9622642, b: 0.7307761, a: 1}
+    - Color_57bd784d72c0418e8c1219c1ae15c189: {r: 1, g: 1, b: 1, a: 1}
+    - Color_7da0803776c644dda0b79f8bae64e73e: {r: 0, g: 0.8002434, b: 1, a: 0.5019608}
+    - Color_a13ad718afa04074b72265e6fb450037: {r: 0.15294118, g: 0.44797832, b: 0.7529412, a: 0.5019608}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &4118398432208862929
+--- !u!114 &636840936986635852
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
