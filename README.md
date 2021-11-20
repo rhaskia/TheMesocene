@@ -1,4 +1,4 @@
-# TheMesocene
+# The Mesocene
 
 This game is an Open-World RPG! We have a lot of animals, and plan to make more! You have all sorts of weird crap here!
 
