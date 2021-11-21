@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
             Render.flipX = true;
             info.PA.shadow.flipX = true;
         }
-        else
+        else if (input.x < -0.01)
         {
             Render.flipX = false;
             info.PA.shadow.flipX = false;
