@@ -14,6 +14,7 @@ public class CreatureAnimation : MonoBehaviour
     public int currentFrame;
     public SpriteRenderer spriteRenderer;
     public SpriteRenderer shadow;
+    public Creature current;
 
     void Start()
     {
@@ -26,60 +27,60 @@ public class CreatureAnimation : MonoBehaviour
         switch (currentAnim)
         {
             case Animations.Idle:
-                AnimationSet(info.PM.current.IdleAnimSide, info.PM.current.IdleAnimFront, info.PM.current.IdleAnimBack);
-                Invoke("Animation", info.PM.current.IdleAnimSpeed);
+                AnimationSet(current.IdleAnimSide, current.IdleAnimFront, current.IdleAnimBack);
+                Invoke("Animation", current.IdleAnimSpeed);
                 break;
             case Animations.Walk:
-                AnimationSet(info.PM.current.WalkAnimSide, info.PM.current.WalkAnimFront, info.PM.current.WalkAnimBack);
-                Invoke("Animation", info.PM.current.WalkAnimSpeed);
+                AnimationSet(current.WalkAnimSide, current.WalkAnimFront, current.WalkAnimBack);
+                Invoke("Animation", current.WalkAnimSpeed);
                 break;
             case Animations.Run:
-                AnimationSet(info.PM.current.RunAnimSide, info.PM.current.RunAnimFront, info.PM.current.RunAnimBack);
-                Invoke("Animation", info.PM.current.RunAnimSpeed);
+                AnimationSet(current.RunAnimSide, current.RunAnimFront, current.RunAnimBack);
+                Invoke("Animation", current.RunAnimSpeed);
                 break;
             case Animations.Jump:
-                AnimationSet(info.PM.current.JumpAnimSide, info.PM.current.JumpAnimFront, info.PM.current.JumpAnimBack);
-                Invoke("Animation", info.PM.current.JumpAnimSpeed);
+                AnimationSet(current.JumpAnimSide, current.JumpAnimFront, current.JumpAnimBack);
+                Invoke("Animation", current.JumpAnimSpeed);
                 break;
             case Animations.Glide:
-                AnimationSet(info.PM.current.GlideAnimSide, info.PM.current.GlideAnimFront, info.PM.current.GlideAnimBack);
-                Invoke("Animation", info.PM.current.GlideAnimSpeed);
+                AnimationSet(current.GlideAnimSide, current.GlideAnimFront, current.GlideAnimBack);
+                Invoke("Animation", current.GlideAnimSpeed);
                 break;
             case Animations.Fly:
-                AnimationSet(info.PM.current.FlyAnimSide, info.PM.current.FlyAnimFront, info.PM.current.FlyAnimBack);
-                Invoke("Animation", info.PM.current.FlyAnimSpeed);
+                AnimationSet(current.FlyAnimSide, current.FlyAnimFront, current.FlyAnimBack);
+                Invoke("Animation", current.FlyAnimSpeed);
                 break;
             case Animations.Rest:
-                AnimationSet(info.PM.current.RestAnimSide, info.PM.current.RestAnimFront, info.PM.current.RestAnimBack);
-                Invoke("Animation", info.PM.current.RestAnimSpeed);
+                AnimationSet(current.RestAnimSide, current.RestAnimFront, current.RestAnimBack);
+                Invoke("Animation", current.RestAnimSpeed);
                 break;
             case Animations.Sleep://i need sleep
-                AnimationSet(info.PM.current.SleepAnimSide, info.PM.current.SleepAnimFront, info.PM.current.SleepAnimBack);
-                Invoke("Animation", info.PM.current.SleepAnimSpeed);
+                AnimationSet(current.SleepAnimSide, current.SleepAnimFront, current.SleepAnimBack);
+                Invoke("Animation", current.SleepAnimSpeed);
                 break;
             case Animations.Eat:
-                AnimationOneTime(info.PM.current.EatAnimSide, info.PM.current.EatAnimFront, info.PM.current.EatAnimBack);
-                Invoke("Animation", info.PM.current.EatAnimSpeed);
+                AnimationOneTime(current.EatAnimSide, current.EatAnimFront, current.EatAnimBack);
+                Invoke("Animation", current.EatAnimSpeed);
                 break;
             case Animations.Drink:
-                AnimationOneTime(info.PM.current.DrinkAnimSide, info.PM.current.DrinkAnimFront, info.PM.current.DrinkAnimBack);
-                Invoke("Animation", info.PM.current.DrinkAnimSpeed);
+                AnimationOneTime(current.DrinkAnimSide, current.DrinkAnimFront, current.DrinkAnimBack);
+                Invoke("Animation", current.DrinkAnimSpeed);
                 break;
             case Animations.LMB:
-                AnimationSet(info.PM.current.LMBAnimSide, info.PM.current.LMBAnimFront, info.PM.current.LMBAnimBack);
-                Invoke("Animation", info.PM.current.LMBAnimSpeed);
+                AnimationSet(current.LMBAnimSide, current.LMBAnimFront, current.LMBAnimBack);
+                Invoke("Animation", current.LMBAnimSpeed);
                 break;
             case Animations.RMB:
-                AnimationSet(info.PM.current.RMBAnimSide, info.PM.current.RMBAnimFront, info.PM.current.RMBAnimBack);
-                Invoke("Animation", info.PM.current.RMBAnimSpeed);
+                AnimationSet(current.RMBAnimSide, current.RMBAnimFront, current.RMBAnimBack);
+                Invoke("Animation", current.RMBAnimSpeed);
                 break;
             case Animations.Limp:
-                AnimationSet(info.PM.current.LimpAnimSide, info.PM.current.LimpAnimFront, info.PM.current.LimpAnimBack);
-                Invoke("Animation", info.PM.current.LimpAnimSpeed);
+                AnimationSet(current.LimpAnimSide, current.LimpAnimFront, current.LimpAnimBack);
+                Invoke("Animation", current.LimpAnimSpeed);
                 break;
             case Animations.Death:
-                AnimationSet(info.PM.current.DeathAnimSide, info.PM.current.DeathAnimFront, info.PM.current.DeathAnimBack);
-                Invoke("Animation", info.PM.current.DeathAnimSpeed);
+                AnimationSet(current.DeathAnimSide, current.DeathAnimFront, current.DeathAnimBack);
+                Invoke("Animation", current.DeathAnimSpeed);
                 break;
 
         }

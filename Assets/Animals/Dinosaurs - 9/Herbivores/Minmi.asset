@@ -22,10 +22,15 @@ MonoBehaviour:
   WalkAnimFront: []
   WalkAnimBack: []
   WalkAnimSpeed: 0.15
-  RunAnimSide: []
+  RunAnimSide:
+  - {fileID: -7949542318723957242, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
+  - {fileID: -2187446991431690454, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
+  - {fileID: 1747473444688981594, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
+  - {fileID: -2803038098527968520, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
+  - {fileID: 6900339957824219186, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
   RunAnimFront: []
   RunAnimBack: []
-  RunAnimSpeed: 0
+  RunAnimSpeed: 0.15
   canJump: 0
   JumpAnimSide: []
   JumpAnimFront: []
@@ -79,3 +84,4 @@ MonoBehaviour:
   IdleAnimFront: []
   IdleAnimBack: []
   IdleAnimSpeed: 0.1
+  Dead: {fileID: 0}

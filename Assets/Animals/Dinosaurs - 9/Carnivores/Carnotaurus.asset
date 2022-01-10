@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b2e271b7ff82a408599ba51ef93ecf, type: 3}
+  m_Name: Carnotaurus
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 0}
+  WalkAnimSide: []
+  WalkAnimFront: []
+  WalkAnimBack: []
+  WalkAnimSpeed: 0.15
+  RunAnimSide:
+  - {fileID: -7559467890655287280, guid: 9373a9258e39bc448bd2a8e454418ccd, type: 3}
+  - {fileID: 4294187527181680905, guid: 9373a9258e39bc448bd2a8e454418ccd, type: 3}
+  - {fileID: 6181354163587597066, guid: 9373a9258e39bc448bd2a8e454418ccd, type: 3}
+  - {fileID: -6881509115175698339, guid: 9373a9258e39bc448bd2a8e454418ccd, type: 3}
+  - {fileID: -6535970265782431845, guid: 9373a9258e39bc448bd2a8e454418ccd, type: 3}
+  - {fileID: -5801873363562469521, guid: 9373a9258e39bc448bd2a8e454418ccd, type: 3}
+  - {fileID: -3139955103042840711, guid: 9373a9258e39bc448bd2a8e454418ccd, type: 3}
+  RunAnimFront:
+  - {fileID: -2090180488234589481, guid: 38682d2a802d677459a872b1e9ca34a9, type: 3}
+  - {fileID: 3597476744544999788, guid: 38682d2a802d677459a872b1e9ca34a9, type: 3}
+  - {fileID: 5259659034392471969, guid: 38682d2a802d677459a872b1e9ca34a9, type: 3}
+  - {fileID: 7768215860032649799, guid: 38682d2a802d677459a872b1e9ca34a9, type: 3}
+  - {fileID: 7263401982987447963, guid: 38682d2a802d677459a872b1e9ca34a9, type: 3}
+  - {fileID: -2686913353656771191, guid: 38682d2a802d677459a872b1e9ca34a9, type: 3}
+  - {fileID: 2808761589295964313, guid: 38682d2a802d677459a872b1e9ca34a9, type: 3}
+  RunAnimBack: []
+  RunAnimSpeed: 0.15
+  canJump: 0
+  JumpAnimSide: []
+  JumpAnimFront: []
+  JumpAnimBack: []
+  JumpAnimSpeed: 0.15
+  canGlide: 0
+  GlideAnimSide: []
+  GlideAnimFront: []
+  GlideAnimBack: []
+  GlideAnimSpeed: 0.15
+  canFly: 0
+  FlyAnimSide: []
+  FlyAnimFront: []
+  FlyAnimBack: []
+  FlyAnimSpeed: 0.15
+  RestAnimSide: []
+  RestAnimFront: []
+  RestAnimBack: []
+  RestAnimSpeed: 0.15
+  SleepAnimSide: []
+  SleepAnimFront: []
+  SleepAnimBack: []
+  SleepAnimSpeed: 0.15
+  EatAnimSide: []
+  EatAnimFront: []
+  EatAnimBack: []
+  EatAnimSpeed: 0.15
+  DrinkAnimSide: []
+  DrinkAnimFront: []
+  DrinkAnimBack: []
+  DrinkAnimSpeed: 0.15
+  LMBAnimSide: []
+  LMBAnimFront: []
+  LMBAnimBack: []
+  LMBAnimSpeed: 0.15
+  RMBAnimSide: []
+  RMBAnimFront: []
+  RMBAnimBack: []
+  RMBAnimSpeed: 0.15
+  LimpAnimSide: []
+  LimpAnimFront: []
+  LimpAnimBack: []
+  LimpAnimSpeed: 0.15
+  DeathAnimSide: []
+  DeathAnimFront: []
+  DeathAnimBack: []
+  DeathAnimSpeed: 0.15
+  IdleAnimSide: []
+  IdleAnimFront: []
+  IdleAnimBack: []
+  IdleAnimSpeed: 0.15
+  Dead: {fileID: 0}

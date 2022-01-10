@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Info : MonoBehaviour
 {
-    public PlayerMovement PM;
+    public PlayerMovement PMO;
     public CreatureAnimation PA;
+    public PlayerManager PMA;
 
 }

@@ -1,0 +1,444 @@
+fileFormatVersion: 2
+guid: 3fc4fee1cff3bb448ad0f585750164de
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8227765641636016445
+    second: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_0
+  - first:
+      213: 1446525129594118698
+    second: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_1
+  - first:
+      213: 394765906187715618
+    second: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_2
+  - first:
+      213: 8503028256073685283
+    second: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_3
+  - first:
+      213: 243603032325928178
+    second: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_4
+  - first:
+      213: -3135379278603114454
+    second: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_5
+  - first:
+      213: -6100481746919555322
+    second: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_6
+  - first:
+      213: -3797421494913796409
+    second: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_7
+  - first:
+      213: -235379471493288408
+    second: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_8
+  - first:
+      213: -8727069123407702690
+    second: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_9
+  - first:
+      213: -6476751500532760390
+    second: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_10
+  - first:
+      213: -6758492662613407243
+    second: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_11
+  - first:
+      213: -8116922230647749968
+    second: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_12
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 108
+        width: 116
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31f0ec2245ee2270800000000000000
+      internalID: 8227765641636016445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_1
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 108
+        width: 116
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a22222cf0f6131410800000000000000
+      internalID: 1446525129594118698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_2
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 108
+        width: 116
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22401c7008d7a7500800000000000000
+      internalID: 394765906187715618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_3
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 108
+        width: 116
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329916ed523d00670800000000000000
+      internalID: 8503028256073685283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 116
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4beffcaa3716300800000000000000
+      internalID: 243603032325928178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_5
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 72
+        width: 116
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28adb67825ec74d0800000000000000
+      internalID: -3135379278603114454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_6
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 72
+        width: 116
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ffa144c2cb65ba0800000000000000
+      internalID: -6100481746919555322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_7
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 72
+        width: 116
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6fa3d1549dc4bc0800000000000000
+      internalID: -3797421494913796409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 116
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e29362e93cbbcf0800000000000000
+      internalID: -235379471493288408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_9
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 36
+        width: 116
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e551109ced833e680800000000000000
+      internalID: -8727069123407702690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_10
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 36
+        width: 116
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0444853d4fd16a0800000000000000
+      internalID: -6476751500532760390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_11
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 36
+        width: 116
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f908db3bb20532a0800000000000000
+      internalID: -6758492662613407243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P.A.R.A._Tyrannosaurus_Rex_Walk_Cycle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 116
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b205cc8c36ea5f80800000000000000
+      internalID: -8116922230647749968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

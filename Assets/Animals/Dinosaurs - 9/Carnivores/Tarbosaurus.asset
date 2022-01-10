@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b2e271b7ff82a408599ba51ef93ecf, type: 3}
+  m_Name: Tarbosaurus
+  m_EditorClassIdentifier: 
+  Icon: {fileID: -2066253810338372408, guid: ee916829d7eb8d4499a29a71b3aa0cf1, type: 3}
+  WalkAnimSide:
+  - {fileID: 6822268131477531875, guid: 74195c7861f4fae4eb33b119b569e486, type: 3}
+  - {fileID: -8664349905024266735, guid: 74195c7861f4fae4eb33b119b569e486, type: 3}
+  - {fileID: -6215933070931654429, guid: 74195c7861f4fae4eb33b119b569e486, type: 3}
+  - {fileID: -7750855141002202661, guid: 74195c7861f4fae4eb33b119b569e486, type: 3}
+  - {fileID: 5148290961621414896, guid: 74195c7861f4fae4eb33b119b569e486, type: 3}
+  - {fileID: -887354386932800964, guid: 74195c7861f4fae4eb33b119b569e486, type: 3}
+  WalkAnimFront: []
+  WalkAnimBack: []
+  WalkAnimSpeed: 0.15
+  RunAnimSide: []
+  RunAnimFront: []
+  RunAnimBack: []
+  RunAnimSpeed: 0
+  canJump: 0
+  JumpAnimSide: []
+  JumpAnimFront: []
+  JumpAnimBack: []
+  JumpAnimSpeed: 0
+  canGlide: 0
+  GlideAnimSide: []
+  GlideAnimFront: []
+  GlideAnimBack: []
+  GlideAnimSpeed: 0
+  canFly: 0
+  FlyAnimSide: []
+  FlyAnimFront: []
+  FlyAnimBack: []
+  FlyAnimSpeed: 0
+  RestAnimSide: []
+  RestAnimFront: []
+  RestAnimBack: []
+  RestAnimSpeed: 0
+  SleepAnimSide: []
+  SleepAnimFront: []
+  SleepAnimBack: []
+  SleepAnimSpeed: 0
+  EatAnimSide: []
+  EatAnimFront: []
+  EatAnimBack: []
+  EatAnimSpeed: 0
+  DrinkAnimSide: []
+  DrinkAnimFront: []
+  DrinkAnimBack: []
+  DrinkAnimSpeed: 0
+  LMBAnimSide: []
+  LMBAnimFront: []
+  LMBAnimBack: []
+  LMBAnimSpeed: 0
+  RMBAnimSide: []
+  RMBAnimFront: []
+  RMBAnimBack: []
+  RMBAnimSpeed: 0
+  LimpAnimSide: []
+  LimpAnimFront: []
+  LimpAnimBack: []
+  LimpAnimSpeed: 0
+  DeathAnimSide: []
+  DeathAnimFront: []
+  DeathAnimBack: []
+  DeathAnimSpeed: 0
+  IdleAnimSide:
+  - {fileID: 7637541618887139194, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  - {fileID: -1788930687495515248, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  - {fileID: 8836564904185627002, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  - {fileID: -4504069029110564300, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  - {fileID: -3156132468195481831, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  - {fileID: -1241712488240488371, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  - {fileID: 9156792428469390193, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  - {fileID: -7435777754179697335, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  - {fileID: 5537032914042643938, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  - {fileID: 712542213536585067, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  - {fileID: 226434935329039366, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  - {fileID: 3340631853714382552, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  - {fileID: -8219668910744300828, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  - {fileID: -327435575732423787, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  - {fileID: -2034292801482692978, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  - {fileID: -3622039736814900030, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  - {fileID: 4733490738485640413, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  - {fileID: -922164866917845250, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  - {fileID: 3516062482925182688, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  - {fileID: 8438734160620653322, guid: 711aeae763b96ef4595db9d9f60bb06b, type: 3}
+  IdleAnimFront: []
+  IdleAnimBack: []
+  IdleAnimSpeed: 0.1

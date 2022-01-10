@@ -31,11 +31,15 @@ MonoBehaviour:
   GlideAnimFront: []
   GlideAnimBack: []
   GlideAnimSpeed: 0
-  canFly: 0
-  FlyAnimSide: []
+  canFly: 1
+  FlyAnimSide:
+  - {fileID: -3047637373184838962, guid: 318ffc86d2c104a4dacfab85667a4476, type: 3}
+  - {fileID: -2287864235409848140, guid: 318ffc86d2c104a4dacfab85667a4476, type: 3}
+  - {fileID: 7673655465665533723, guid: 318ffc86d2c104a4dacfab85667a4476, type: 3}
+  - {fileID: -1162722230201344119, guid: 318ffc86d2c104a4dacfab85667a4476, type: 3}
   FlyAnimFront: []
   FlyAnimBack: []
-  FlyAnimSpeed: 0
+  FlyAnimSpeed: 0.15
   RestAnimSide: []
   RestAnimFront: []
   RestAnimBack: []
@@ -72,3 +76,4 @@ MonoBehaviour:
   IdleAnimFront: []
   IdleAnimBack: []
   IdleAnimSpeed: 0
+  Dead: {fileID: 0}

@@ -1,0 +1,612 @@
+fileFormatVersion: 2
+guid: 711aeae763b96ef4595db9d9f60bb06b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7637541618887139194
+    second: Tarbosaurus_Bataar_Idle_0
+  - first:
+      213: -1788930687495515248
+    second: Tarbosaurus_Bataar_Idle_1
+  - first:
+      213: 8836564904185627002
+    second: Tarbosaurus_Bataar_Idle_2
+  - first:
+      213: -4504069029110564300
+    second: Tarbosaurus_Bataar_Idle_3
+  - first:
+      213: -3156132468195481831
+    second: Tarbosaurus_Bataar_Idle_4
+  - first:
+      213: -1241712488240488371
+    second: Tarbosaurus_Bataar_Idle_5
+  - first:
+      213: 9156792428469390193
+    second: Tarbosaurus_Bataar_Idle_6
+  - first:
+      213: -7435777754179697335
+    second: Tarbosaurus_Bataar_Idle_7
+  - first:
+      213: 5537032914042643938
+    second: Tarbosaurus_Bataar_Idle_8
+  - first:
+      213: 712542213536585067
+    second: Tarbosaurus_Bataar_Idle_9
+  - first:
+      213: 226434935329039366
+    second: Tarbosaurus_Bataar_Idle_10
+  - first:
+      213: 3340631853714382552
+    second: Tarbosaurus_Bataar_Idle_11
+  - first:
+      213: -8219668910744300828
+    second: Tarbosaurus_Bataar_Idle_12
+  - first:
+      213: -327435575732423787
+    second: Tarbosaurus_Bataar_Idle_13
+  - first:
+      213: -2034292801482692978
+    second: Tarbosaurus_Bataar_Idle_14
+  - first:
+      213: -3622039736814900030
+    second: Tarbosaurus_Bataar_Idle_15
+  - first:
+      213: 4733490738485640413
+    second: Tarbosaurus_Bataar_Idle_16
+  - first:
+      213: -922164866917845250
+    second: Tarbosaurus_Bataar_Idle_17
+  - first:
+      213: 3516062482925182688
+    second: Tarbosaurus_Bataar_Idle_18
+  - first:
+      213: 8438734160620653322
+    second: Tarbosaurus_Bataar_Idle_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f970f03affdf960800000000000000
+      internalID: 7637541618887139194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 128
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 093d80494017c27e0800000000000000
+      internalID: -1788930687495515248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 128
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a710ba456f8c1aa70800000000000000
+      internalID: 8836564904185627002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 128
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43ab604e4155e71c0800000000000000
+      internalID: -4504069029110564300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917a129fd3a2334d0800000000000000
+      internalID: -3156132468195481831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 96
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d406241221d84cee0800000000000000
+      internalID: -1241712488240488371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 96
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b87ece236731f70800000000000000
+      internalID: 9156792428469390193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 96
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9450e5d678fcec890800000000000000
+      internalID: -7435777754179697335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5682f491e77dc40800000000000000
+      internalID: 5537032914042643938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 64
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6591553e5573e900800000000000000
+      internalID: 712542213536585067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 64
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 604a60dbf55742300800000000000000
+      internalID: 226434935329039366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 64
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de1006b8fe4c5e20800000000000000
+      internalID: 3340631853714382552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e293c3ecaedded80800000000000000
+      internalID: -8219668910744300828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_13
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 32
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593b4a52417b47bf0800000000000000
+      internalID: -327435575732423787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_14
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 32
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e866d76a97db4c3e0800000000000000
+      internalID: -2034292801482692978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_15
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 32
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc6cccbc0eebbdc0800000000000000
+      internalID: -3622039736814900030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddcb90f5fbcb0b140800000000000000
+      internalID: 4733490738485640413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_17
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 0
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef6340b70ffc333f0800000000000000
+      internalID: -922164866917845250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_18
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 0
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee55d603309bc030800000000000000
+      internalID: 3516062482925182688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarbosaurus_Bataar_Idle_19
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 0
+        width: 98
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b8fbd32086c1570800000000000000
+      internalID: 8438734160620653322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

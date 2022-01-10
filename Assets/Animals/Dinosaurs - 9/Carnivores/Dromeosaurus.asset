@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b2e271b7ff82a408599ba51ef93ecf, type: 3}
+  m_Name: Dromeosaurus
+  m_EditorClassIdentifier: 
+  Icon: {fileID: -6247695596267637672, guid: b7ea685f97b538949826a8fc6e87ed25, type: 3}
+  WalkAnimSide:
+  - {fileID: -5655971058035445274, guid: b7ea685f97b538949826a8fc6e87ed25, type: 3}
+  - {fileID: -6247695596267637672, guid: b7ea685f97b538949826a8fc6e87ed25, type: 3}
+  - {fileID: 2507197514875299288, guid: b7ea685f97b538949826a8fc6e87ed25, type: 3}
+  - {fileID: 7023440843275543477, guid: b7ea685f97b538949826a8fc6e87ed25, type: 3}
+  - {fileID: 6262790022058771783, guid: b7ea685f97b538949826a8fc6e87ed25, type: 3}
+  - {fileID: 1765751303527970633, guid: b7ea685f97b538949826a8fc6e87ed25, type: 3}
+  - {fileID: 1666198749412090289, guid: b7ea685f97b538949826a8fc6e87ed25, type: 3}
+  - {fileID: 7777163144399457674, guid: b7ea685f97b538949826a8fc6e87ed25, type: 3}
+  - {fileID: 5409063661441211731, guid: b7ea685f97b538949826a8fc6e87ed25, type: 3}
+  WalkAnimFront: []
+  WalkAnimBack: []
+  WalkAnimSpeed: 0.15
+  RunAnimSide: []
+  RunAnimFront: []
+  RunAnimBack: []
+  RunAnimSpeed: 0.15
+  canJump: 0
+  JumpAnimSide: []
+  JumpAnimFront: []
+  JumpAnimBack: []
+  JumpAnimSpeed: 0.15
+  canGlide: 0
+  GlideAnimSide: []
+  GlideAnimFront: []
+  GlideAnimBack: []
+  GlideAnimSpeed: 0.15
+  canFly: 0
+  FlyAnimSide: []
+  FlyAnimFront: []
+  FlyAnimBack: []
+  FlyAnimSpeed: 0.15
+  RestAnimSide:
+  - {fileID: 5948787475110532073, guid: 497aeb7e7f7cf834496a9a599df22fdc, type: 3}
+  - {fileID: 1607951744743390526, guid: 497aeb7e7f7cf834496a9a599df22fdc, type: 3}
+  - {fileID: 824781394367499908, guid: 497aeb7e7f7cf834496a9a599df22fdc, type: 3}
+  - {fileID: -3596525674854601481, guid: 497aeb7e7f7cf834496a9a599df22fdc, type: 3}
+  - {fileID: -874599192991864250, guid: 497aeb7e7f7cf834496a9a599df22fdc, type: 3}
+  - {fileID: 1014038116436220665, guid: 497aeb7e7f7cf834496a9a599df22fdc, type: 3}
+  RestAnimFront: []
+  RestAnimBack: []
+  RestAnimSpeed: 0.15
+  SleepAnimSide: []
+  SleepAnimFront: []
+  SleepAnimBack: []
+  SleepAnimSpeed: 0.15
+  EatAnimSide: []
+  EatAnimFront: []
+  EatAnimBack: []
+  EatAnimSpeed: 0.15
+  DrinkAnimSide: []
+  DrinkAnimFront: []
+  DrinkAnimBack: []
+  DrinkAnimSpeed: 0.15
+  LMBAnimSide: []
+  LMBAnimFront: []
+  LMBAnimBack: []
+  LMBAnimSpeed: 0.15
+  RMBAnimSide: []
+  RMBAnimFront: []
+  RMBAnimBack: []
+  RMBAnimSpeed: 0.15
+  LimpAnimSide: []
+  LimpAnimFront: []
+  LimpAnimBack: []
+  LimpAnimSpeed: 0.15
+  DeathAnimSide: []
+  DeathAnimFront: []
+  DeathAnimBack: []
+  DeathAnimSpeed: 0.15
+  IdleAnimSide:
+  - {fileID: 2507197514875299288, guid: b7ea685f97b538949826a8fc6e87ed25, type: 3}
+  - {fileID: 2507197514875299288, guid: b7ea685f97b538949826a8fc6e87ed25, type: 3}
+  IdleAnimFront: []
+  IdleAnimBack: []
+  IdleAnimSpeed: 0.15

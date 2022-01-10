@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b2e271b7ff82a408599ba51ef93ecf, type: 3}
+  m_Name: Allosaurus
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 0}
+  WalkAnimSide: []
+  WalkAnimFront: []
+  WalkAnimBack: []
+  WalkAnimSpeed: 0.15
+  RunAnimSide:
+  - {fileID: -7677303608463135909, guid: 869ea4aa7ab399842b83589eb5627a77, type: 3}
+  - {fileID: 8178756989589584452, guid: 869ea4aa7ab399842b83589eb5627a77, type: 3}
+  - {fileID: -100400472840742454, guid: 869ea4aa7ab399842b83589eb5627a77, type: 3}
+  - {fileID: -6361073686990257605, guid: 869ea4aa7ab399842b83589eb5627a77, type: 3}
+  - {fileID: 5240120971846152502, guid: 869ea4aa7ab399842b83589eb5627a77, type: 3}
+  - {fileID: 9038625582773229439, guid: 869ea4aa7ab399842b83589eb5627a77, type: 3}
+  - {fileID: 769743707638151677, guid: 869ea4aa7ab399842b83589eb5627a77, type: 3}
+  - {fileID: -4061080130162613482, guid: 869ea4aa7ab399842b83589eb5627a77, type: 3}
+  RunAnimFront: []
+  RunAnimBack: []
+  RunAnimSpeed: 0.15
+  canJump: 0
+  JumpAnimSide: []
+  JumpAnimFront: []
+  JumpAnimBack: []
+  JumpAnimSpeed: 0.15
+  canGlide: 0
+  GlideAnimSide: []
+  GlideAnimFront: []
+  GlideAnimBack: []
+  GlideAnimSpeed: 0.15
+  canFly: 0
+  FlyAnimSide: []
+  FlyAnimFront: []
+  FlyAnimBack: []
+  FlyAnimSpeed: 0.15
+  RestAnimSide: []
+  RestAnimFront: []
+  RestAnimBack: []
+  RestAnimSpeed: 0.15
+  SleepAnimSide: []
+  SleepAnimFront: []
+  SleepAnimBack: []
+  SleepAnimSpeed: 0.15
+  EatAnimSide: []
+  EatAnimFront: []
+  EatAnimBack: []
+  EatAnimSpeed: 0.15
+  DrinkAnimSide: []
+  DrinkAnimFront: []
+  DrinkAnimBack: []
+  DrinkAnimSpeed: 0.15
+  LMBAnimSide: []
+  LMBAnimFront: []
+  LMBAnimBack: []
+  LMBAnimSpeed: 0.15
+  RMBAnimSide: []
+  RMBAnimFront: []
+  RMBAnimBack: []
+  RMBAnimSpeed: 0.15
+  LimpAnimSide: []
+  LimpAnimFront: []
+  LimpAnimBack: []
+  LimpAnimSpeed: 0.15
+  DeathAnimSide: []
+  DeathAnimFront: []
+  DeathAnimBack: []
+  DeathAnimSpeed: 0.15
+  IdleAnimSide: []
+  IdleAnimFront: []
+  IdleAnimBack: []
+  IdleAnimSpeed: 0.15
+  Dead: {fileID: 0}
