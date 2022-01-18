@@ -9,6 +9,8 @@ public class CreatureEditor : Editor
 {
 
     bool[] Sbools = new bool[15];
+    bool AnimationsOpen;
+    bool DataOpen;
     Creature script;
 
     public override void OnInspectorGUI()
@@ -38,48 +40,59 @@ public class CreatureEditor : Editor
         EditorGUILayout.Space();
         EditorGUILayout.Space();
 
+        //Data
+        DataOpen = EditorGUILayout.Foldout(DataOpen, "Data");
+
+        if (DataOpen)
+        {
+            script.WalkSpeed = EditorGUILayout.FloatField("Walk Speed:", script.WalkSpeed);
+        }
+
         //Animations
-        EditorGUILayout.LabelField("Animations", EditorStyles.boldLabel);
+        AnimationsOpen = EditorGUILayout.Foldout(AnimationsOpen, "Animations");
 
-        drawArray("IdleAnim", 13);
+        if (AnimationsOpen)
+        {
+            drawArray("IdleAnim", 13);
 
-        drawArray("WalkAnim", 0);
-        drawArray("RunAnim", 1);
+            drawArray("WalkAnim", 0);
+            drawArray("RunAnim", 1);
 
-        EditorGUILayout.Space();
-        EditorGUILayout.Space();
+            EditorGUILayout.Space();
+            EditorGUILayout.Space();
 
-        script.canJump = EditorGUILayout.Toggle("Can Jump", script.canJump);
-        script.canGlide = EditorGUILayout.Toggle("Can Glide", script.canGlide);
-        script.canFly = EditorGUILayout.Toggle("Can Fly", script.canFly);
+            script.canJump = EditorGUILayout.Toggle("Can Jump", script.canJump);
+            script.canGlide = EditorGUILayout.Toggle("Can Glide", script.canGlide);
+            script.canFly = EditorGUILayout.Toggle("Can Fly", script.canFly);
 
-        if (script.canJump) { drawArray("JumpAnim", 2); }
-        if (script.canGlide) { drawArray("GlideAnim", 3); }
-        if (script.canFly) { drawArray("FlyAnim", 4); }
+            if (script.canJump) { drawArray("JumpAnim", 2); }
+            if (script.canGlide) { drawArray("GlideAnim", 3); }
+            if (script.canFly) { drawArray("FlyAnim", 4); }
 
-        EditorGUILayout.Space();
-        EditorGUILayout.Space();
+            EditorGUILayout.Space();
+            EditorGUILayout.Space();
 
-        drawArray("RestAnim", 5);
-        drawArray("SleepAnim", 6);
+            drawArray("RestAnim", 5);
+            drawArray("SleepAnim", 6);
 
-        EditorGUILayout.Space();
-        EditorGUILayout.Space();
+            EditorGUILayout.Space();
+            EditorGUILayout.Space();
 
-        drawArray("EatAnim", 7);
-        drawArray("DrinkAnim", 8);
+            drawArray("EatAnim", 7);
+            drawArray("DrinkAnim", 8);
 
-        EditorGUILayout.Space();
-        EditorGUILayout.Space();
+            EditorGUILayout.Space();
+            EditorGUILayout.Space();
 
-        drawArray("LMBAnim", 9);
-        drawArray("RMBAnim", 10);
+            drawArray("LMBAnim", 9);
+            drawArray("RMBAnim", 10);
 
-        EditorGUILayout.Space();
-        EditorGUILayout.Space();
+            EditorGUILayout.Space();
+            EditorGUILayout.Space();
 
-        drawArray("LimpAnim", 11);
-        drawArray("DeathAnim", 12);
+            drawArray("LimpAnim", 11);
+            drawArray("DeathAnim", 12);
+        }
 
         serializedObject.ApplyModifiedProperties();
 

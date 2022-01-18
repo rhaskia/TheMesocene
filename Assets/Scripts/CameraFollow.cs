@@ -11,18 +11,11 @@ public class CameraFollow : MonoBehaviour
     public float smoothSpeed = 0.125f;
     public Vector3 ZoomOffset;
 
-
-    void Start()
-    {
-        Camera cam = Camera.main;
-    }
-
     void FixedUpdate()
     {
-
-
+        //Camera Follow
         Vector3 desiredPosition = target.position + ZoomOffset;
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);//smooth, like butter
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
         transform.position = smoothedPosition;
     }
 }

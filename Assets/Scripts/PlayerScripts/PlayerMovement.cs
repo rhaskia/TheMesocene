@@ -6,37 +6,40 @@ public class PlayerMovement : MonoBehaviour
 {
 
     [Header("Variables")]
-    public Vector2 MoveSpeed;
+    public Vector2 moveSpeed;
+    public float stamina;
+    public float maxStamina;
 
     [Header("Relations")]
-    public Rigidbody Rigidbody;
-    public Info info;
-    public SpriteRenderer Render;
+    Info info;
+    public Rigidbody rigidbody;
+    public SpriteRenderer render;
     public Creature current;
 
     private void Start()
     {
         Invoke("Animation", 0.25f);
+        info = FindObjectOfType<Info>();
     }
 
     private void FixedUpdate()
     {
         //Input
         Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        Vector3 speed = new Vector3(input.normalized.x * MoveSpeed.x, 0, input.normalized.y * MoveSpeed.y);
+        Vector3 speed = new Vector3(input.normalized.x * moveSpeed.x, 0, input.normalized.y * moveSpeed.y);
 
         //Applying Input
-        Rigidbody.velocity = speed;
+        rigidbody.velocity = speed;
 
         //Flipping
         if (input.x > 0.01)
         {
-            Render.flipX = true;
+            render.flipX = true;
             info.PA.shadow.flipX = true;
         }
         else if (input.x < -0.01)
         {
-            Render.flipX = false;
+            render.flipX = false;
             info.PA.shadow.flipX = false;
         }
 
