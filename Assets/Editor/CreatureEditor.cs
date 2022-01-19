@@ -46,6 +46,7 @@ public class CreatureEditor : Editor
         if (DataOpen)
         {
             script.WalkSpeed = EditorGUILayout.FloatField("Walk Speed:", script.WalkSpeed);
+            script.RunSpeed = EditorGUILayout.FloatField("Run Speed:", script.RunSpeed);
         }
 
         //Animations

@@ -8,6 +8,8 @@ public class PlayerManager : MonoBehaviour
 {
     Info info;
 
+    public Creature creature;
+
     public Slider Health;
     public Slider Stamina;
 
@@ -18,6 +20,7 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         info = FindObjectOfType<Info>();
+        info.PA.current = creature;
     }
 
     // Update is called once per frame

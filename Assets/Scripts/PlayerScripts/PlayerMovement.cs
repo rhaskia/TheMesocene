@@ -12,9 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Relations")]
     Info info;
-    public Rigidbody rigidbody;
+    public Rigidbody rb;
     public SpriteRenderer render;
-    public Creature current;
 
     private void Start()
     {
@@ -25,11 +24,13 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         //Input
+        float speedMult = GetSpeed();
+
         Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         Vector3 speed = new Vector3(input.normalized.x * moveSpeed.x, 0, input.normalized.y * moveSpeed.y);
 
         //Applying Input
-        rigidbody.velocity = speed;
+        rb.velocity = speed * speedMult;
 
         //Flipping
         if (input.x > 0.01)
@@ -59,6 +60,27 @@ public class PlayerMovement : MonoBehaviour
             info.PA.currentAnim = CreatureAnimation.Animations.Eat;
 
         }
+
+        stamina++;
+        stamina = Mathf.Clamp(stamina, 0, maxStamina);
+    }
+
+    public float GetSpeed()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            stamina -= 3;
+            if (stamina > 10)
+                return info.PMA.creature.RunSpeed;
+        }
+        else if (Input.GetKey(KeyCode.Z))
+        {
+            stamina -= 2;
+            if (stamina > 10)
+                return ((info.PMA.creature.RunSpeed - info.PMA.creature.WalkSpeed) / 2) + info.PMA.creature.WalkSpeed;
+        }
+
+        return info.PMA.creature.WalkSpeed;
     }
 
 }

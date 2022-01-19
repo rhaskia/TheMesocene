@@ -85,4 +85,5 @@ public class Creature : ScriptableObject
     public float IdleAnimSpeed = 0.15f;
 
     public Sprite Dead;
+
 }

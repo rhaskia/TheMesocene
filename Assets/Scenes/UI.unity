@@ -208,6 +208,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ff4ab02aa1a3954184ccde5c0c57827, type: 3}
+--- !u!114 &62756328 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4752745576180019615, guid: 370451884eac9d34f87f914c4b14965c, type: 3}
+  m_PrefabInstance: {fileID: 980239941}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &108126448 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2160277420582000078, guid: 50128967b5fab0c468f680ef850e05dc, type: 3}
@@ -502,6 +513,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392377782}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &444046352 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3821853567234315381, guid: 370451884eac9d34f87f914c4b14965c, type: 3}
+  m_PrefabInstance: {fileID: 980239941}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &496651295
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,6 +853,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3807269786689868396, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1185935690}
+    - target: {fileID: 3807269786689868396, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: current
+      value: 
+      objectReference: {fileID: 11400000, guid: 22e9af58369fa094cb309a3e1fb67a4e, type: 2}
     - target: {fileID: 3807269786689868397, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -879,6 +909,22 @@ PrefabInstance:
       propertyPath: Health
       value: 
       objectReference: {fileID: 842058544}
+    - target: {fileID: 3807269786689868399, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: Hunger
+      value: 
+      objectReference: {fileID: 444046352}
+    - target: {fileID: 3807269786689868399, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: Thirst
+      value: 
+      objectReference: {fileID: 62756328}
+    - target: {fileID: 3807269786689868399, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: Stamina
+      value: 
+      objectReference: {fileID: 1813922127}
+    - target: {fileID: 3807269786689868399, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: creature
+      value: 
+      objectReference: {fileID: 11400000, guid: 22e9af58369fa094cb309a3e1fb67a4e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
 --- !u!1001 &687935018
@@ -1515,6 +1561,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4080457776762741561, guid: 13c227fd7dfa1be478befb9b9973341f, type: 3}
   m_PrefabInstance: {fileID: 1310639245}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1185935690 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 3807269786689868369, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+  m_PrefabInstance: {fileID: 635672596}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1224853447 stripped
 MonoBehaviour:
@@ -2226,6 +2277,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8378908111313874225, guid: 3ff4ab02aa1a3954184ccde5c0c57827, type: 3}
   m_PrefabInstance: {fileID: 38286705}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1813922127 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9005666799251321435, guid: 370451884eac9d34f87f914c4b14965c, type: 3}
+  m_PrefabInstance: {fileID: 980239941}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1814159862
 PrefabInstance:
   m_ObjectHideFlags: 0
