@@ -906,6 +906,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3807269786689868399, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1185935690}
+    - target: {fileID: 3807269786689868399, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
       propertyPath: Health
       value: 
       objectReference: {fileID: 842058544}
@@ -917,6 +921,10 @@ PrefabInstance:
       propertyPath: Thirst
       value: 
       objectReference: {fileID: 62756328}
+    - target: {fileID: 3807269786689868399, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: render
+      value: 
+      objectReference: {fileID: 1905096541}
     - target: {fileID: 3807269786689868399, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
       propertyPath: Stamina
       value: 
@@ -2500,6 +2508,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ff4ab02aa1a3954184ccde5c0c57827, type: 3}
+--- !u!212 &1905096541 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3807269784863294793, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+  m_PrefabInstance: {fileID: 635672596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1905609487 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2758246312476836099, guid: a2ac9b0170dabd24e967003e704df6e9, type: 3}
