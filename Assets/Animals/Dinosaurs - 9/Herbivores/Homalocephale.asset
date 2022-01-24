@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Homalocephale
   m_EditorClassIdentifier: 
   Icon: {fileID: 0}
+  SneakSpeed: 0
+  WalkSpeed: 0
+  RunSpeed: 0
   WalkAnimSide: []
   WalkAnimFront: []
   WalkAnimBack: []

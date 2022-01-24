@@ -45,8 +45,10 @@ public class CreatureEditor : Editor
 
         if (DataOpen)
         {
+            script.SneakSpeed = EditorGUILayout.FloatField("Sneak Speed:", script.SneakSpeed);
             script.WalkSpeed = EditorGUILayout.FloatField("Walk Speed:", script.WalkSpeed);
             script.RunSpeed = EditorGUILayout.FloatField("Run Speed:", script.RunSpeed);
+            EditorUtility.SetDirty(script);
         }
 
         //Animations
@@ -95,9 +97,8 @@ public class CreatureEditor : Editor
             drawArray("DeathAnim", 12);
         }
 
+        EditorUtility.SetDirty(script);
         serializedObject.ApplyModifiedProperties();
-
-
     }
 
     public static Texture2D textureFromSprite(Sprite sprite)

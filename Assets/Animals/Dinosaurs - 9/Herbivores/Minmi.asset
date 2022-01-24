@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Minmi
   m_EditorClassIdentifier: 
   Icon: {fileID: -7949542318723957242, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
+  SneakSpeed: 0.5
+  WalkSpeed: 1
+  RunSpeed: 2
   WalkAnimSide:
   - {fileID: -7949542318723957242, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
   - {fileID: -2187446991431690454, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}

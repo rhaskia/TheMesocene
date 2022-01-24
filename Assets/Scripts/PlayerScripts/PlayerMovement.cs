@@ -54,6 +54,12 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        //Sneaking
+        else if (Input.GetKey(KeyCode.LeftControl))
+        {
+            return info.PMA.creature.SneakSpeed;
+        }
+
         //Walking
         return info.PMA.creature.WalkSpeed;
     }

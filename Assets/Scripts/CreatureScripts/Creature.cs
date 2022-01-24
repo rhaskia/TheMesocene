@@ -8,8 +8,9 @@ public class Creature : ScriptableObject
 {
     public Sprite Icon;
 
-    public float WalkSpeed;
-    public float RunSpeed;
+    public float SneakSpeed = 0.5f;
+    public float WalkSpeed = 1;
+    public float RunSpeed = 2;
 
     public Sprite[] WalkAnimSide;
     public Sprite[] WalkAnimFront;
