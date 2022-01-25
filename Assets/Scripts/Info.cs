@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Info : MonoBehaviour
 {
-    public PlayerMovement PMO;
-    public CreatureAnimation PA;
-    public PlayerManager PMA;
-    public CreatureHealth PH;
-
+    public Creature creature;
+    public PlayerMovement movement;
+    public CreatureAnimation animater;
+    public PlayerManager manager;
+    public CreatureHealth health;
 }

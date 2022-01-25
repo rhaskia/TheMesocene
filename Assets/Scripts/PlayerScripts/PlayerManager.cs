@@ -8,20 +8,19 @@ public class PlayerManager : MonoBehaviour
 {
     [Header("Relations")]
     Info info;
-    public Creature creature;
     public Rigidbody rb;
     public SpriteRenderer render;
 
     [Header("Variables")]
-    public Slider Health;
-    public Slider Stamina;
-    public Slider Thirst;
-    public Slider Hunger;
+    public Slider health;
+    public Slider stamina;
+    public Slider thirst;
+    public Slider hunger;
 
     void Start()
     {
         info = FindObjectOfType<Info>();
-        info.PA.current = creature;
+        info.animater.current = info.creature;
     }
 
     void Update()
@@ -30,21 +29,21 @@ public class PlayerManager : MonoBehaviour
         Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
         //UI
-        Health.value = info.PH.health / (info.PH.maxHealth * 1f);
-        Stamina.value = info.PMO.stamina / (info.PMO.maxStamina * 1f);
-        Thirst.value = info.PH.thirst / (info.PH.maxThirst * 1f);
-        Hunger.value = info.PH.hunger / (info.PH.maxHunger * 1f);
+        health.value = info.health.health / (info.health.maxHealth * 1f);
+        stamina.value = info.movement.stamina / (info.movement.maxStamina * 1f);
+        thirst.value = info.health.thirst / (info.health.maxThirst * 1f);
+        hunger.value = info.health.hunger / (info.health.maxHunger * 1f);
 
         //Flipping
         if (input.x > 0.01)
         {
             render.flipX = true;
-            info.PA.shadow.flipX = true;
+            info.animater.shadow.flipX = true;
         }
         else if (input.x < -0.01)
         {
             render.flipX = false;
-            info.PA.shadow.flipX = false;
+            info.animater.shadow.flipX = false;
         }
 
         //Animations
@@ -59,23 +58,23 @@ public class PlayerManager : MonoBehaviour
     void ManageAnimations(Vector2 _input)
     {
         bool movingAnims =
-            info.PA.currentAnim == CreatureAnimation.Animations.Idle ||
-            info.PA.currentAnim == CreatureAnimation.Animations.Run ||
-            info.PA.currentAnim == CreatureAnimation.Animations.Walk;
+            info.animater.currentAnim == CreatureAnimation.Animations.idle ||
+            info.animater.currentAnim == CreatureAnimation.Animations.run ||
+            info.animater.currentAnim == CreatureAnimation.Animations.walk;
 
         if (movingAnims)
         {
-            if (rb.velocity.x + rb.velocity.z > creature.WalkSpeed + 0.01f || rb.velocity.x + rb.velocity.z < -creature.WalkSpeed + 0.01f)
+            if (rb.velocity.x + rb.velocity.z > info.creature.walkSpeed + 0.01f || rb.velocity.x + rb.velocity.z < -info.creature.walkSpeed + 0.01f)
             {
-                info.PA.currentAnim = CreatureAnimation.Animations.Run;
+                info.animater.currentAnim = CreatureAnimation.Animations.run;
             }
-            else if (rb.velocity.x + rb.velocity.z > creature.WalkSpeed / 8f || rb.velocity.x + rb.velocity.z < -creature.WalkSpeed / 8f)
+            else if (rb.velocity.x + rb.velocity.z > info.creature.walkSpeed / 8f || rb.velocity.x + rb.velocity.z < -info.creature.walkSpeed / 8f)
             {
-                info.PA.currentAnim = CreatureAnimation.Animations.Walk;
+                info.animater.currentAnim = CreatureAnimation.Animations.walk;
             }
             else
             {
-                info.PA.currentAnim = CreatureAnimation.Animations.Idle;
+                info.animater.currentAnim = CreatureAnimation.Animations.idle;
             }
         }
 

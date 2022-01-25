@@ -6,59 +6,57 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "Critter")]
 public class Creature : ScriptableObject
 {
-    public Sprite Icon;
+    public float sneakSpeed = 0.5f;
+    public float walkSpeed = 1;
+    public float runSpeed = 2;
 
-    public float SneakSpeed = 0.5f;
-    public float WalkSpeed = 1;
-    public float RunSpeed = 2;
+    public Sprite[] walkAnimSide;
+    public Sprite[] walkAnimFront;
+    public Sprite[] walkAnimBack;
+    public float walkAnimSpeed = 0.15f;
 
-    public Sprite[] WalkAnimSide;
-    public Sprite[] WalkAnimFront;
-    public Sprite[] WalkAnimBack;
-    public float WalkAnimSpeed = 0.15f;
-
-    public Sprite[] RunAnimSide;
-    public Sprite[] RunAnimFront;
-    public Sprite[] RunAnimBack;
-    public float RunAnimSpeed = 0.15f;
+    public Sprite[] runAnimSide;
+    public Sprite[] runAnimFront;
+    public Sprite[] runAnimBack;
+    public float runAnimSpeed = 0.15f;
 
     public bool canJump;
-    public Sprite[] JumpAnimSide;
-    public Sprite[] JumpAnimFront;
-    public Sprite[] JumpAnimBack;
-    public float JumpAnimSpeed = 0.15f;
+    public Sprite[] jumpAnimSide;
+    public Sprite[] jumpAnimFront;
+    public Sprite[] jumpAnimBack;
+    public float jumpAnimSpeed = 0.15f;
 
     public bool canGlide;
-    public Sprite[] GlideAnimSide;
-    public Sprite[] GlideAnimFront;
-    public Sprite[] GlideAnimBack;
-    public float GlideAnimSpeed = 0.15f;
+    public Sprite[] glideAnimSide;
+    public Sprite[] glideAnimFront;
+    public Sprite[] glideAnimBack;
+    public float glideAnimSpeed = 0.15f;
 
     public bool canFly;
-    public Sprite[] FlyAnimSide;
-    public Sprite[] FlyAnimFront;
-    public Sprite[] FlyAnimBack;
-    public float FlyAnimSpeed = 0.15f;
+    public Sprite[] flyAnimSide;
+    public Sprite[] flyAnimFront;
+    public Sprite[] flyAnimBack;
+    public float flyAnimSpeed = 0.15f;
 
-    public Sprite[] RestAnimSide;
-    public Sprite[] RestAnimFront;
-    public Sprite[] RestAnimBack;
-    public float RestAnimSpeed = 0.15f;
+    public Sprite[] restAnimSide;
+    public Sprite[] restAnimFront;
+    public Sprite[] restAnimBack;
+    public float restAnimSpeed = 0.15f;
 
-    public Sprite[] SleepAnimSide;
-    public Sprite[] SleepAnimFront;
-    public Sprite[] SleepAnimBack;
-    public float SleepAnimSpeed = 0.15f;
+    public Sprite[] sleepAnimSide;
+    public Sprite[] sleepAnimFront;
+    public Sprite[] sleepAnimBack;
+    public float sleepAnimSpeed = 0.15f;
 
-    public Sprite[] EatAnimSide;
-    public Sprite[] EatAnimFront;
-    public Sprite[] EatAnimBack;
-    public float EatAnimSpeed = 0.15f;
+    public Sprite[] eatAnimSide;
+    public Sprite[] eatAnimFront;
+    public Sprite[] eatAnimBack;
+    public float eatAnimSpeed = 0.15f;
 
-    public Sprite[] DrinkAnimSide;
-    public Sprite[] DrinkAnimFront;
-    public Sprite[] DrinkAnimBack;
-    public float DrinkAnimSpeed = 0.15f;
+    public Sprite[] drinkAnimSide;
+    public Sprite[] drinkAnimFront;
+    public Sprite[] drinkAnimBack;
+    public float drinkAnimSpeed = 0.15f;
 
     public Sprite[] LMBAnimSide;
     public Sprite[] LMBAnimFront;
@@ -70,21 +68,21 @@ public class Creature : ScriptableObject
     public Sprite[] RMBAnimBack;
     public float RMBAnimSpeed = 0.15f;
 
-    public Sprite[] LimpAnimSide;
-    public Sprite[] LimpAnimFront;
-    public Sprite[] LimpAnimBack;
-    public float LimpAnimSpeed = 0.15f;
+    public Sprite[] limpAnimSide;
+    public Sprite[] limpAnimFront;
+    public Sprite[] limpAnimBack;
+    public float limpAnimSpeed = 0.15f;
 
-    public Sprite[] DeathAnimSide;
-    public Sprite[] DeathAnimFront;
-    public Sprite[] DeathAnimBack;
-    public float DeathAnimSpeed = 0.15f;
+    public Sprite[] deathAnimSide;
+    public Sprite[] deathAnimFront;
+    public Sprite[] deathAnimBack;
+    public float deathAnimSpeed = 0.15f;
 
-    public Sprite[] IdleAnimSide;
-    public Sprite[] IdleAnimFront;
-    public Sprite[] IdleAnimBack;
-    public float IdleAnimSpeed = 0.15f;
+    public Sprite[] idleAnimSide;
+    public Sprite[] idleAnimFront;
+    public Sprite[] idleAnimBack;
+    public float idleAnimSpeed = 0.15f;
 
-    public Sprite Dead;
+    public Sprite dead;
 
 }

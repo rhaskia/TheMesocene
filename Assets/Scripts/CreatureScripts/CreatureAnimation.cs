@@ -5,7 +5,7 @@ using UnityEngine;
 public class CreatureAnimation : MonoBehaviour
 {
     Info info;
-    public enum Animations { Idle, Walk, Run, Jump, Glide, Fly, Rest, Sleep, Eat, Drink, LMB, RMB, Limp, Death }
+    public enum Animations { idle, walk, run, jump, glide, fly, rest, sleep, eat, drink, LMB, RMB, limp, death }
     public enum Directions { Side, Front, Back }
 
     [Header("Info")]
@@ -26,45 +26,45 @@ public class CreatureAnimation : MonoBehaviour
     {
         switch (currentAnim)
         {
-            case Animations.Idle:
-                AnimationSet(current.IdleAnimSide, current.IdleAnimFront, current.IdleAnimBack);
-                Invoke("Animation", current.IdleAnimSpeed);
+            case Animations.idle:
+                AnimationSet(current.idleAnimSide, current.idleAnimFront, current.idleAnimBack);
+                Invoke("Animation", current.idleAnimSpeed);
                 break;
-            case Animations.Walk:
-                AnimationSet(current.WalkAnimSide, current.WalkAnimFront, current.WalkAnimBack);
-                Invoke("Animation", current.WalkAnimSpeed);
+            case Animations.walk:
+                AnimationSet(current.walkAnimSide, current.walkAnimFront, current.walkAnimBack);
+                Invoke("Animation", current.walkAnimSpeed);
                 break;
-            case Animations.Run:
-                AnimationSet(current.RunAnimSide, current.RunAnimFront, current.RunAnimBack);
-                Invoke("Animation", current.RunAnimSpeed);
+            case Animations.run:
+                AnimationSet(current.runAnimSide, current.runAnimFront, current.runAnimBack);
+                Invoke("Animation", current.runAnimSpeed);
                 break;
-            case Animations.Jump:
-                AnimationSet(current.JumpAnimSide, current.JumpAnimFront, current.JumpAnimBack);
-                Invoke("Animation", current.JumpAnimSpeed);
+            case Animations.jump:
+                AnimationSet(current.jumpAnimSide, current.jumpAnimFront, current.jumpAnimBack);
+                Invoke("Animation", current.jumpAnimSpeed);
                 break;
-            case Animations.Glide:
-                AnimationSet(current.GlideAnimSide, current.GlideAnimFront, current.GlideAnimBack);
-                Invoke("Animation", current.GlideAnimSpeed);
+            case Animations.glide:
+                AnimationSet(current.glideAnimSide, current.glideAnimFront, current.glideAnimBack);
+                Invoke("Animation", current.glideAnimSpeed);
                 break;
-            case Animations.Fly:
-                AnimationSet(current.FlyAnimSide, current.FlyAnimFront, current.FlyAnimBack);
-                Invoke("Animation", current.FlyAnimSpeed);
+            case Animations.fly:
+                AnimationSet(current.flyAnimSide, current.flyAnimFront, current.flyAnimBack);
+                Invoke("Animation", current.flyAnimSpeed);
                 break;
-            case Animations.Rest:
-                AnimationSet(current.RestAnimSide, current.RestAnimFront, current.RestAnimBack);
-                Invoke("Animation", current.RestAnimSpeed);
+            case Animations.rest:
+                AnimationSet(current.restAnimSide, current.restAnimFront, current.restAnimBack);
+                Invoke("Animation", current.restAnimSpeed);
                 break;
-            case Animations.Sleep://i need sleep
-                AnimationSet(current.SleepAnimSide, current.SleepAnimFront, current.SleepAnimBack);
-                Invoke("Animation", current.SleepAnimSpeed);
+            case Animations.sleep://i need sleep
+                AnimationSet(current.sleepAnimSide, current.sleepAnimFront, current.sleepAnimBack);
+                Invoke("Animation", current.sleepAnimSpeed);
                 break;
-            case Animations.Eat:
-                AnimationOneTime(current.EatAnimSide, current.EatAnimFront, current.EatAnimBack);
-                Invoke("Animation", current.EatAnimSpeed);
+            case Animations.eat:
+                AnimationOneTime(current.eatAnimSide, current.eatAnimFront, current.eatAnimBack);
+                Invoke("Animation", current.eatAnimSpeed);
                 break;
-            case Animations.Drink:
-                AnimationOneTime(current.DrinkAnimSide, current.DrinkAnimFront, current.DrinkAnimBack);
-                Invoke("Animation", current.DrinkAnimSpeed);
+            case Animations.drink:
+                AnimationOneTime(current.drinkAnimSide, current.drinkAnimFront, current.drinkAnimBack);
+                Invoke("Animation", current.drinkAnimSpeed);
                 break;
             case Animations.LMB:
                 AnimationSet(current.LMBAnimSide, current.LMBAnimFront, current.LMBAnimBack);
@@ -74,13 +74,13 @@ public class CreatureAnimation : MonoBehaviour
                 AnimationSet(current.RMBAnimSide, current.RMBAnimFront, current.RMBAnimBack);
                 Invoke("Animation", current.RMBAnimSpeed);
                 break;
-            case Animations.Limp:
-                AnimationSet(current.LimpAnimSide, current.LimpAnimFront, current.LimpAnimBack);
-                Invoke("Animation", current.LimpAnimSpeed);
+            case Animations.limp:
+                AnimationSet(current.limpAnimSide, current.limpAnimFront, current.limpAnimBack);
+                Invoke("Animation", current.limpAnimSpeed);
                 break;
-            case Animations.Death:
-                AnimationSet(current.DeathAnimSide, current.DeathAnimFront, current.DeathAnimBack);
-                Invoke("Animation", current.DeathAnimSpeed);
+            case Animations.death:
+                AnimationSet(current.deathAnimSide, current.deathAnimFront, current.deathAnimBack);
+                Invoke("Animation", current.deathAnimSpeed);
                 break;
 
         }
@@ -120,17 +120,17 @@ public class CreatureAnimation : MonoBehaviour
         {
             case Directions.Side:
                 if (currentFrame >= side.Length)
-                { currentAnim = Animations.Idle; currentFrame = 0; }
+                { currentAnim = Animations.idle; currentFrame = 0; }
                 spriteRenderer.sprite = side[currentFrame];
                 break;
             case Directions.Front:
                 if (currentFrame >= front.Length)
-                { currentAnim = Animations.Idle; currentFrame = 0; }
+                { currentAnim = Animations.idle; currentFrame = 0; }
                 spriteRenderer.sprite = front[currentFrame];
                 break;
             case Directions.Back:
                 if (currentFrame >= back.Length)
-                { currentAnim = Animations.Idle; currentFrame = 0; }
+                { currentAnim = Animations.idle; currentFrame = 0; }
                 spriteRenderer.sprite = back[currentFrame];
                 break;
         }

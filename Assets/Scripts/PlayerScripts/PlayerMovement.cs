@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Relations")]
+    Info info;
+    public Rigidbody rb;
 
     [Header("Variables")]
     public Vector2 moveSpeed;
     public float stamina;
     public float maxStamina;
-
-    [Header("Relations")]
-    Info info;
-    public Rigidbody rb;
 
     private void Start()
     {
@@ -41,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
             stamina -= 3;
             if (stamina > 10)
             {
-                return info.PMA.creature.RunSpeed;
+                return info.creature.runSpeed;
             }
         }
         //Trotting
@@ -50,18 +49,18 @@ public class PlayerMovement : MonoBehaviour
             stamina -= 2;
             if (stamina > 10)
             {
-                return ((info.PMA.creature.RunSpeed - info.PMA.creature.WalkSpeed) / 2) + info.PMA.creature.WalkSpeed;
+                return ((info.creature.runSpeed - info.creature.walkSpeed) / 2) + info.creature.walkSpeed;
             }
         }
 
         //Sneaking
         else if (Input.GetKey(KeyCode.LeftControl))
         {
-            return info.PMA.creature.SneakSpeed;
+            return info.creature.sneakSpeed;
         }
 
         //Walking
-        return info.PMA.creature.WalkSpeed;
+        return info.creature.walkSpeed;
     }
 
 }

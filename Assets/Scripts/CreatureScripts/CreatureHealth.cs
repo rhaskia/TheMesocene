@@ -33,7 +33,7 @@ public class CreatureHealth : MonoBehaviour
         //Check Health
         if (health == 0)
         {
-            info.PMA.Die();//player mananger die;
+            info.manager.Die();//player mananger die;
         }
     }
 

@@ -21,33 +21,14 @@ public class CreatureEditor : Editor
 
         serializedObject.Update();
 
-        //Small icon
-        if (script.Icon != null)
-        {
-            Texture2D texture = textureFromSprite(script.Icon);
-            texture.filterMode = FilterMode.Point;
-            EditorGUI.DrawPreviewTexture(new Rect((Screen.width / 2) - Mathf.RoundToInt(texture.width * 1.5f), 10, texture.width * 3, texture.height * 3), texture);
-            int spaces = Mathf.RoundToInt(texture.height * 3f / 5f);
-            for (int i = 0; i < spaces + 1; i++)
-            {
-                EditorGUILayout.Space();
-            }
-
-        }
-
-        script.Icon = (Sprite)EditorGUILayout.ObjectField(script.Icon, typeof(Sprite), true);
-
-        EditorGUILayout.Space();
-        EditorGUILayout.Space();
-
         //Data
         DataOpen = EditorGUILayout.Foldout(DataOpen, "Data");
 
         if (DataOpen)
         {
-            script.SneakSpeed = EditorGUILayout.FloatField("Sneak Speed:", script.SneakSpeed);
-            script.WalkSpeed = EditorGUILayout.FloatField("Walk Speed:", script.WalkSpeed);
-            script.RunSpeed = EditorGUILayout.FloatField("Run Speed:", script.RunSpeed);
+            script.sneakSpeed = EditorGUILayout.FloatField("Sneak Speed:", script.sneakSpeed);
+            script.walkSpeed = EditorGUILayout.FloatField("Walk Speed:", script.walkSpeed);
+            script.runSpeed = EditorGUILayout.FloatField("Run Speed:", script.runSpeed);
             EditorUtility.SetDirty(script);
         }
 
@@ -56,10 +37,10 @@ public class CreatureEditor : Editor
 
         if (AnimationsOpen)
         {
-            drawArray("IdleAnim", 13);
+            drawArray("idleAnim", 13);
 
-            drawArray("WalkAnim", 0);
-            drawArray("RunAnim", 1);
+            drawArray("walkAnim", 0);
+            drawArray("runAnim", 1);
 
             EditorGUILayout.Space();
             EditorGUILayout.Space();
@@ -68,21 +49,21 @@ public class CreatureEditor : Editor
             script.canGlide = EditorGUILayout.Toggle("Can Glide", script.canGlide);
             script.canFly = EditorGUILayout.Toggle("Can Fly", script.canFly);
 
-            if (script.canJump) { drawArray("JumpAnim", 2); }
-            if (script.canGlide) { drawArray("GlideAnim", 3); }
-            if (script.canFly) { drawArray("FlyAnim", 4); }
+            if (script.canJump) { drawArray("jumpAnim", 2); }
+            if (script.canGlide) { drawArray("glideAnim", 3); }
+            if (script.canFly) { drawArray("flyAnim", 4); }
 
             EditorGUILayout.Space();
             EditorGUILayout.Space();
 
-            drawArray("RestAnim", 5);
-            drawArray("SleepAnim", 6);
+            drawArray("restAnim", 5);
+            drawArray("sleepAnim", 6);
 
             EditorGUILayout.Space();
             EditorGUILayout.Space();
 
-            drawArray("EatAnim", 7);
-            drawArray("DrinkAnim", 8);
+            drawArray("eatAnim", 7);
+            drawArray("drinkAnim", 8);
 
             EditorGUILayout.Space();
             EditorGUILayout.Space();
@@ -93,8 +74,8 @@ public class CreatureEditor : Editor
             EditorGUILayout.Space();
             EditorGUILayout.Space();
 
-            drawArray("LimpAnim", 11);
-            drawArray("DeathAnim", 12);
+            drawArray("limpAnim", 11);
+            drawArray("deathAnim", 12);
         }
 
         EditorUtility.SetDirty(script);
@@ -133,31 +114,31 @@ public class CreatureEditor : Editor
             switch (num)
             {
                 case 0:
-                    script.WalkAnimSpeed = EditorGUILayout.FloatField(script.WalkAnimSpeed);
+                    script.walkAnimSpeed = EditorGUILayout.FloatField(script.walkAnimSpeed);
                     break;
                 case 1:
-                    script.RunAnimSpeed = EditorGUILayout.FloatField(script.RunAnimSpeed);
+                    script.runAnimSpeed = EditorGUILayout.FloatField(script.runAnimSpeed);
                     break;
                 case 2:
-                    script.JumpAnimSpeed = EditorGUILayout.FloatField(script.JumpAnimSpeed);
+                    script.jumpAnimSpeed = EditorGUILayout.FloatField(script.jumpAnimSpeed);
                     break;
                 case 3:
-                    script.GlideAnimSpeed = EditorGUILayout.FloatField(script.GlideAnimSpeed);
+                    script.glideAnimSpeed = EditorGUILayout.FloatField(script.glideAnimSpeed);
                     break;
                 case 4:
-                    script.FlyAnimSpeed = EditorGUILayout.FloatField(script.FlyAnimSpeed);
+                    script.flyAnimSpeed = EditorGUILayout.FloatField(script.flyAnimSpeed);
                     break;
                 case 5:
-                    script.RestAnimSpeed = EditorGUILayout.FloatField(script.RestAnimSpeed);
+                    script.restAnimSpeed = EditorGUILayout.FloatField(script.restAnimSpeed);
                     break;
                 case 6:
-                    script.SleepAnimSpeed = EditorGUILayout.FloatField(script.SleepAnimSpeed);
+                    script.sleepAnimSpeed = EditorGUILayout.FloatField(script.sleepAnimSpeed);
                     break;
                 case 7:
-                    script.EatAnimSpeed = EditorGUILayout.FloatField(script.EatAnimSpeed);
+                    script.eatAnimSpeed = EditorGUILayout.FloatField(script.eatAnimSpeed);
                     break;
                 case 8:
-                    script.DrinkAnimSpeed = EditorGUILayout.FloatField(script.DrinkAnimSpeed);
+                    script.drinkAnimSpeed = EditorGUILayout.FloatField(script.drinkAnimSpeed);
                     break;
                 case 9:
                     script.LMBAnimSpeed = EditorGUILayout.FloatField(script.LMBAnimSpeed);
@@ -166,13 +147,13 @@ public class CreatureEditor : Editor
                     script.RMBAnimSpeed = EditorGUILayout.FloatField(script.RMBAnimSpeed);
                     break;
                 case 11:
-                    script.LimpAnimSpeed = EditorGUILayout.FloatField(script.LimpAnimSpeed);
+                    script.limpAnimSpeed = EditorGUILayout.FloatField(script.limpAnimSpeed);
                     break;
                 case 12:
-                    script.DeathAnimSpeed = EditorGUILayout.FloatField(script.DeathAnimSpeed);
+                    script.deathAnimSpeed = EditorGUILayout.FloatField(script.deathAnimSpeed);
                     break;
                 case 13:
-                    script.IdleAnimSpeed = EditorGUILayout.FloatField(script.IdleAnimSpeed);
+                    script.idleAnimSpeed = EditorGUILayout.FloatField(script.idleAnimSpeed);
                     break;
             }
 
