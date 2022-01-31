@@ -1,8 +1,9 @@
-using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using Unity;
 using UnityEngine.UI;
+using System.Globalization;
 
 [CustomEditor(typeof(Creature))]
 public class CreatureEditor : Editor

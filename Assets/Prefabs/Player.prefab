@@ -253,12 +253,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 708c7a18193c93d4ca244a6af0e2606d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 3807269786689868369}
   moveSpeed: {x: 1, y: 1}
   stamina: 100
   maxStamina: 100
-  rigidbody: {fileID: 3807269786689868369}
-  render: {fileID: 3807269784863294793}
-  current: {fileID: 11400000, guid: bf734fa1704ff864e849fb9a724ebd84, type: 2}
 --- !u!114 &3807269786689868399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,10 +269,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150b37a6435ddcf45838d00b9125f40f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: {fileID: 0}
-  Stamina: {fileID: 0}
-  Thirst: {fileID: 0}
-  Hunger: {fileID: 0}
+  rb: {fileID: 3807269786689868369}
+  render: {fileID: 3807269784863294793}
+  health: {fileID: 0}
+  stamina: {fileID: 0}
+  thirst: {fileID: 0}
+  hunger: {fileID: 0}
 --- !u!114 &4896710063740220816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,10 +306,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a467170a2355982488b21600e28f18bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PMO: {fileID: 3807269786689868396}
-  PA: {fileID: 3807269784863294795}
-  PMA: {fileID: 3807269786689868399}
-  PH: {fileID: 4896710063740220816}
+  creature: {fileID: 11400000, guid: 22e9af58369fa094cb309a3e1fb67a4e, type: 2}
+  movement: {fileID: 3807269786689868396}
+  animater: {fileID: 3807269784863294795}
+  manager: {fileID: 3807269786689868399}
+  health: {fileID: 4896710063740220816}
 --- !u!54 &3807269786689868369
 Rigidbody:
   m_ObjectHideFlags: 0

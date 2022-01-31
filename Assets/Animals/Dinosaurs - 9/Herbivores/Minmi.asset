@@ -12,59 +12,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b2e271b7ff82a408599ba51ef93ecf, type: 3}
   m_Name: Minmi
   m_EditorClassIdentifier: 
-  Icon: {fileID: -7949542318723957242, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
-  SneakSpeed: 0.5
-  WalkSpeed: 1
-  RunSpeed: 2
-  WalkAnimSide:
-  - {fileID: -7949542318723957242, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
-  - {fileID: -2187446991431690454, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
-  - {fileID: 1747473444688981594, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
-  - {fileID: -2803038098527968520, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
-  - {fileID: 6900339957824219186, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
-  WalkAnimFront: []
-  WalkAnimBack: []
-  WalkAnimSpeed: 0.15
-  RunAnimSide:
-  - {fileID: -7949542318723957242, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
-  - {fileID: -2187446991431690454, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
-  - {fileID: 1747473444688981594, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
-  - {fileID: -2803038098527968520, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
-  - {fileID: 6900339957824219186, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
-  RunAnimFront: []
-  RunAnimBack: []
-  RunAnimSpeed: 0.15
+  sneakSpeed: 0.5
+  walkSpeed: 1
+  runSpeed: 2
+  walkAnimSide: []
+  walkAnimFront: []
+  walkAnimBack: []
+  walkAnimSpeed: 0.15
+  runAnimSide: []
+  runAnimFront: []
+  runAnimBack: []
+  runAnimSpeed: 0.15
   canJump: 0
-  JumpAnimSide: []
-  JumpAnimFront: []
-  JumpAnimBack: []
-  JumpAnimSpeed: 0
+  jumpAnimSide: []
+  jumpAnimFront: []
+  jumpAnimBack: []
+  jumpAnimSpeed: 0.15
   canGlide: 0
-  GlideAnimSide: []
-  GlideAnimFront: []
-  GlideAnimBack: []
-  GlideAnimSpeed: 0
+  glideAnimSide: []
+  glideAnimFront: []
+  glideAnimBack: []
+  glideAnimSpeed: 0.15
   canFly: 0
-  FlyAnimSide: []
-  FlyAnimFront: []
-  FlyAnimBack: []
-  FlyAnimSpeed: 0
-  RestAnimSide: []
-  RestAnimFront: []
-  RestAnimBack: []
-  RestAnimSpeed: 0
-  SleepAnimSide: []
-  SleepAnimFront: []
-  SleepAnimBack: []
-  SleepAnimSpeed: 0
-  EatAnimSide: []
-  EatAnimFront: []
-  EatAnimBack: []
-  EatAnimSpeed: 0
-  DrinkAnimSide: []
-  DrinkAnimFront: []
-  DrinkAnimBack: []
-  DrinkAnimSpeed: 0
+  flyAnimSide: []
+  flyAnimFront: []
+  flyAnimBack: []
+  flyAnimSpeed: 0.15
+  restAnimSide: []
+  restAnimFront: []
+  restAnimBack: []
+  restAnimSpeed: 0.15
+  sleepAnimSide: []
+  sleepAnimFront: []
+  sleepAnimBack: []
+  sleepAnimSpeed: 0.15
+  eatAnimSide: []
+  eatAnimFront: []
+  eatAnimBack: []
+  eatAnimSpeed: 0.15
+  drinkAnimSide: []
+  drinkAnimFront: []
+  drinkAnimBack: []
+  drinkAnimSpeed: 0.15
   LMBAnimSide: []
   LMBAnimFront: []
   LMBAnimBack: []
@@ -73,18 +62,16 @@ MonoBehaviour:
   RMBAnimFront: []
   RMBAnimBack: []
   RMBAnimSpeed: 0
-  LimpAnimSide: []
-  LimpAnimFront: []
-  LimpAnimBack: []
-  LimpAnimSpeed: 0
-  DeathAnimSide: []
-  DeathAnimFront: []
-  DeathAnimBack: []
-  DeathAnimSpeed: 0
-  IdleAnimSide:
-  - {fileID: -7949542318723957242, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
-  - {fileID: -7949542318723957242, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
-  IdleAnimFront: []
-  IdleAnimBack: []
-  IdleAnimSpeed: 0.1
-  Dead: {fileID: 0}
+  limpAnimSide: []
+  limpAnimFront: []
+  limpAnimBack: []
+  limpAnimSpeed: 0.15
+  deathAnimSide: []
+  deathAnimFront: []
+  deathAnimBack: []
+  deathAnimSpeed: 0.15
+  idleAnimSide: []
+  idleAnimFront: []
+  idleAnimBack: []
+  idleAnimSpeed: 0.15
+  dead: {fileID: 0}
