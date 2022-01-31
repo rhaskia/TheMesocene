@@ -103,7 +103,8 @@ public class CreatureEditor : Editor
 
     public void drawArray(string arrayName, int num)
     {
-        Sbools[num] = EditorGUILayout.Foldout(Sbools[num], arrayName + "ations");
+        TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
+        Sbools[num] = EditorGUILayout.Foldout(Sbools[num], textInfo.ToTitleCase(arrayName) + "ations");
         if (Sbools[num])
         {
             EditorGUI.indentLevel = 1;

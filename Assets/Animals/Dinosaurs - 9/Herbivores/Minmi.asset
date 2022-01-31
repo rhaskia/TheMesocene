@@ -15,11 +15,21 @@ MonoBehaviour:
   sneakSpeed: 0.5
   walkSpeed: 1
   runSpeed: 2
-  walkAnimSide: []
+  walkAnimSide:
+  - {fileID: -7949542318723957242, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
+  - {fileID: -2187446991431690454, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
+  - {fileID: 1747473444688981594, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
+  - {fileID: -2803038098527968520, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
+  - {fileID: 6900339957824219186, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
   walkAnimFront: []
   walkAnimBack: []
   walkAnimSpeed: 0.15
-  runAnimSide: []
+  runAnimSide:
+  - {fileID: -7949542318723957242, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
+  - {fileID: -2187446991431690454, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
+  - {fileID: 1747473444688981594, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
+  - {fileID: -2803038098527968520, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
+  - {fileID: 6900339957824219186, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
   runAnimFront: []
   runAnimBack: []
   runAnimSpeed: 0.15
@@ -70,7 +80,9 @@ MonoBehaviour:
   deathAnimFront: []
   deathAnimBack: []
   deathAnimSpeed: 0.15
-  idleAnimSide: []
+  idleAnimSide:
+  - {fileID: 1747473444688981594, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
+  - {fileID: 1747473444688981594, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
   idleAnimFront: []
   idleAnimBack: []
   idleAnimSpeed: 0.15
