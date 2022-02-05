@@ -15,6 +15,16 @@ public class InventoryUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            GameState currentGameState = GameStateManager.Instance.currentGameState;
+            GameState newGameState = currentGameState == GameState.GamePlay
+                ? GameState.Paused
+                : GameState.GamePlay;
 
+            GameStateManager.Instance.SetState(newGameState);
+
+            transform.GetChild(0).gameObject.SetActive(!transform.GetChild(0).gameObject.activeInHierarchy);
+        }
     }
 }

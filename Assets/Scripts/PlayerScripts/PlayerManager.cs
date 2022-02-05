@@ -62,21 +62,20 @@ public class PlayerManager : MonoBehaviour
             info.animater.currentAnim == CreatureAnimation.Animations.run ||
             info.animater.currentAnim == CreatureAnimation.Animations.walk;
 
-        if (movingAnims)
-        {
-            if (rb.velocity.x + rb.velocity.z > info.creature.walkSpeed + 0.01f || rb.velocity.x + rb.velocity.z < -info.creature.walkSpeed + 0.01f)
-            {
-                info.animater.currentAnim = CreatureAnimation.Animations.run;
-            }
-            else if (rb.velocity.x + rb.velocity.z > info.creature.walkSpeed / 8f || rb.velocity.x + rb.velocity.z < -info.creature.walkSpeed / 8f)
-            {
-                info.animater.currentAnim = CreatureAnimation.Animations.walk;
-            }
-            else
-            {
-                info.animater.currentAnim = CreatureAnimation.Animations.idle;
-            }
-        }
+        if (!movingAnims)
+            return;
 
+        if (rb.velocity.x + rb.velocity.z > info.creature.walkSpeed + 0.01f || rb.velocity.x + rb.velocity.z < -info.creature.walkSpeed + 0.01f)
+        {
+            info.animater.currentAnim = CreatureAnimation.Animations.run;
+        }
+        else if (rb.velocity.x + rb.velocity.z > info.creature.walkSpeed / 8f || rb.velocity.x + rb.velocity.z < -info.creature.walkSpeed / 8f)
+        {
+            info.animater.currentAnim = CreatureAnimation.Animations.walk;
+        }
+        else
+        {
+            info.animater.currentAnim = CreatureAnimation.Animations.idle;
+        }
     }
 }

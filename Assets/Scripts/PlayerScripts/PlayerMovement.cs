@@ -11,9 +11,16 @@ public class PlayerMovement : MonoBehaviour
     public float stamina;
     public float maxStamina;
 
-    private void Start()
+
+    private void Awake()
     {
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
         info = FindObjectOfType<Info>();
+    }
+
+    private void OnDestroy()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
     }
 
     private void FixedUpdate()
@@ -34,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
 
     public float GetSpeed()
     {
+        //If In Menu, Dont Move
+
         //Running
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -61,6 +70,11 @@ public class PlayerMovement : MonoBehaviour
 
         //Walking
         return info.creature.walkSpeed;
+    }
+
+    private void OnGameStateChanged(GameState newGameState)
+    {
+        enabled = newGameState == GameState.GamePlay;
     }
 
 }
