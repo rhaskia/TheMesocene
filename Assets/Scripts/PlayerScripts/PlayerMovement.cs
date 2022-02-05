@@ -10,7 +10,13 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 moveSpeed;
     public float stamina;
     public float maxStamina;
+    public float jumpForce;
 
+    [Header("GroundCheck")]
+    public float groundcheckRadius = 0.1f;
+    public LayerMask groundLayer;
+    public Transform groundcheck;
+    public bool onGround;
 
     private void Awake()
     {
@@ -42,6 +48,8 @@ public class PlayerMovement : MonoBehaviour
     public float GetSpeed()
     {
         //If In Menu, Dont Move
+        if (!onGround)
+            return 0.5f;
 
         //Running
         if (Input.GetKey(KeyCode.LeftShift))
@@ -77,51 +85,19 @@ public class PlayerMovement : MonoBehaviour
         enabled = newGameState == GameState.GamePlay;
     }
 
-}
+    void Update()
+    {
+        onGround = Physics.OverlapSphere(groundcheck.position, groundcheckRadius, groundLayer).Length != 0;
+
+        if (onGround)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                rb.AddForce(new Vector3(rb.velocity.x, jumpForce, rb.velocity.z), ForceMode.Impulse);
+            }
+        }
+    }
 
 
-
-public class Jump : MonoBehaviour
-{
-
-public bool onGround;
-private Rigidbody rb;
-
-// Use this for initialization
-void Start()
-{
-
-onGround = true;
-rb = GetComponent<Rigidbody>();
-
-}
-
-void Update()
-{
-
-if (onGround)
-{
-if (Input.GetButtonDown("Jump"))
-{
-rb.velocity = new Vector3(0f, 10f, 0f);
-onGround = false;
-}
-}
-
-}
-
- 
-
-void OnCollisionEnter(Collision any)
-{
-if(any.gameObject.CompareTag("Ground"))
-
-{
-onGround = true;
-}
-
- 
-
-}
 
 }

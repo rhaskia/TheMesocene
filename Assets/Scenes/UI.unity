@@ -430,9 +430,9 @@ GameObject:
   - component: {fileID: 392377786}
   - component: {fileID: 392377785}
   - component: {fileID: 392377784}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (6)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -862,6 +862,22 @@ PrefabInstance:
       propertyPath: current
       value: 
       objectReference: {fileID: 11400000, guid: 22e9af58369fa094cb309a3e1fb67a4e, type: 2}
+    - target: {fileID: 3807269786689868396, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: jumpForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3807269786689868396, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: groundcheck
+      value: 
+      objectReference: {fileID: 1374615065}
+    - target: {fileID: 3807269786689868396, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: groundcheckRadius
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3807269786689868396, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3807269786689868397, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -950,7 +966,16 @@ PrefabInstance:
       propertyPath: creature
       value: 
       objectReference: {fileID: 11400000, guid: 22e9af58369fa094cb309a3e1fb67a4e, type: 2}
-    m_RemovedComponents: []
+    - target: {fileID: 5818347919558946163, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846843204292761304, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5561225629698836434, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
 --- !u!1001 &687935018
 PrefabInstance:
@@ -1847,6 +1872,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50128967b5fab0c468f680ef850e05dc, type: 3}
+--- !u!4 &1374615065 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6846843204292761304, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+  m_PrefabInstance: {fileID: 635672596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1428154196
 PrefabInstance:
   m_ObjectHideFlags: 0
