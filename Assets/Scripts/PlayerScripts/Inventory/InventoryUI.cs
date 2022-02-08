@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
-    public float pageNumber;
+    public int pageNumber;
+    public Image[] images;
+    public Color active;
+    public Color inactive;
 
     // Start is called before the first frame update
     void Start()
@@ -26,5 +30,14 @@ public class InventoryUI : MonoBehaviour
 
             transform.GetChild(0).gameObject.SetActive(!transform.GetChild(0).gameObject.activeInHierarchy);
         }
+    }
+
+    public void OpenPage(int page)
+    {
+        images[pageNumber].color = inactive;
+
+        pageNumber = page;
+
+        images[pageNumber].color = active;
     }
 }
