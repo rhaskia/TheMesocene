@@ -5,15 +5,17 @@ using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
+    Info info;
     public int pageNumber;
     public Image[] images;
+    public Image[] slots;
     public Color active;
     public Color inactive;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        info = FindObjectOfType<Info>();
     }
 
     // Update is called once per frame
@@ -30,6 +32,8 @@ public class InventoryUI : MonoBehaviour
 
             transform.GetChild(0).gameObject.SetActive(!transform.GetChild(0).gameObject.activeInHierarchy);
         }
+
+        UpdateInventory();
     }
 
     public void OpenPage(int page)
@@ -39,5 +43,13 @@ public class InventoryUI : MonoBehaviour
         pageNumber = page;
 
         images[pageNumber].color = active;
+    }
+
+    public void UpdateInventory()
+    {
+        for (int i = 0; i < info.inven.items.Length; i++)
+        {
+            slots[i].sprite = info.inven.items[i].sprite;
+        }
     }
 }
