@@ -8,9 +8,11 @@ public class InventoryUI : MonoBehaviour
     Info info;
     public int pageNumber;
     public Image[] images;
-    public Image[] slots;
+    public Slot[] slots;
+    public Slot[] hotbar;
     public Color active;
     public Color inactive;
+    public Sprite empty;
 
     // Start is called before the first frame update
     void Start()
@@ -47,9 +49,20 @@ public class InventoryUI : MonoBehaviour
 
     public void UpdateInventory()
     {
-        for (int i = 0; i < info.inven.items.Length; i++)
+        for (int i = 0; i < info.inven.items.Count; i++)
         {
-            slots[i].sprite = info.inven.items[i].sprite;
+            if (info.inven.items[i] == null)
+                slots[i].sprite = empty;
+            else
+                slots[i].sprite = info.inven.items[i].sprite;
+        }
+
+        for (int i = 0; i < info.inven.hotbar.Count; i++)
+        {
+            if (info.inven.hotbar[i] == null)
+                hotbar[i].sprite = empty;
+            else
+                hotbar[i].sprite = info.inven.hotbar[i].sprite;
         }
     }
 }
