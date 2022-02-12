@@ -43,11 +43,8 @@ public class InventoryManager : MonoBehaviour
     {
         if (hotbar[hotbarNum] != null)
         {
-            Item temp;
-            int tempInt;
-
-            temp = hotbar[hotbarNum];
-            tempInt = hotbarAmounts[hotbarNum];
+            Item temp = hotbar[hotbarNum];
+            int tempInt = hotbarAmounts[hotbarNum];
 
             hotbar[hotbarNum] = items[num];
             hotbarAmounts[hotbarNum] = itemAmounts[num];
@@ -55,6 +52,7 @@ public class InventoryManager : MonoBehaviour
             items[num] = temp;
             itemAmounts[num] = tempInt;
 
+            print("b");
         }
 
         if (hotbar[hotbarNum] == null)
@@ -64,6 +62,31 @@ public class InventoryManager : MonoBehaviour
 
             items[num] = null;
             itemAmounts[num] = 0;
+
+        }
+    }
+
+    public void hotbarToHotbar(int num, int hotbarNum)
+    {
+        if (hotbar[hotbarNum] != null)
+        {
+            Item temp = hotbar[hotbarNum];
+            int tempInt = hotbarAmounts[hotbarNum];
+
+            hotbar[hotbarNum] = hotbar[num];
+            hotbarAmounts[hotbarNum] = hotbarAmounts[num];
+
+            hotbar[num] = temp;
+            hotbarAmounts[num] = tempInt;
+        }
+
+        if (hotbar[hotbarNum] == null)
+        {
+            hotbar[hotbarNum] = hotbar[num];
+            hotbarAmounts[hotbarNum] = hotbarAmounts[num];
+
+            hotbar[num] = null;
+            hotbarAmounts[num] = 0;
 
         }
     }

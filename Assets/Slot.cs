@@ -7,6 +7,10 @@ public class Slot : MonoBehaviour
 {
     Image item;
     public Sprite sprite;
+    public bool draggable;
+    public bool hotbar;
+    public int num;
+    public Sprite empty;
 
     public void Start()
     {
@@ -16,5 +20,6 @@ public class Slot : MonoBehaviour
     private void Update()
     {
         item.sprite = sprite;
+        draggable = (transform.GetChild(0).GetComponent<Image>().sprite != null || transform.GetChild(0).GetComponent<Image>().sprite != empty);
     }
 }

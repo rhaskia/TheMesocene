@@ -18,6 +18,17 @@ public class InventoryUI : MonoBehaviour
     void Start()
     {
         info = FindObjectOfType<Info>();
+
+        for (int i = 0; i < slots.Length; i++)
+        {
+            slots[i].num = i;
+        }
+
+        for (int i = 0; i < hotbar.Length; i++)
+        {
+            hotbar[i].num = i;
+            hotbar[i].hotbar = true;
+        }
     }
 
     // Update is called once per frame

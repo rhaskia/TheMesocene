@@ -1249,7 +1249,6 @@ GameObject:
   - component: {fileID: 864872475}
   - component: {fileID: 864872478}
   - component: {fileID: 864872479}
-  - component: {fileID: 864872480}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1371,24 +1370,6 @@ MonoBehaviour:
   target: {fileID: 597189050}
   smoothSpeed: 0.125
   ZoomOffset: {x: 0, y: 1, z: -1}
---- !u!114 &864872480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864872474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a467170a2355982488b21600e28f18bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  creature: {fileID: 0}
-  movement: {fileID: 0}
-  animater: {fileID: 0}
-  manager: {fileID: 0}
-  health: {fileID: 0}
-  inven: {fileID: 0}
 --- !u!1 &902768139
 GameObject:
   m_ObjectHideFlags: 0
