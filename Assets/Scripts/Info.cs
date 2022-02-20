@@ -9,5 +9,4 @@ public class Info : MonoBehaviour
     public CreatureAnimation animater;
     public PlayerManager manager;
     public CreatureHealth health;
-    public InventoryManager inven;
 }
