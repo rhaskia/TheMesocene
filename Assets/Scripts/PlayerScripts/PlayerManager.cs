@@ -4,23 +4,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class PlayerManager : MonoBehaviour
 {
     [Header("Relations")]
-    Info info;
+    public Creature creature;
+    public PlayerMovement movement;
+    public CreatureAnimation animator;
+    public CreatureHealth health;
+    public CreatureGrowth growth;
+    public CameraFollow follow;
+
     public Rigidbody rb;
     public SpriteRenderer render;
 
     [Header("Variables")]
-    public Slider health;
-    public Slider stamina;
-    public Slider thirst;
-    public Slider hunger;
+    public Slider healthSlider;
+    public Slider staminaSlider;
+    public Slider thirstSlider;
+    public Slider hungerSlider;
 
     void Start()
     {
-        info = FindObjectOfType<Info>();
-        info.animater.current = info.creature;
+        animator.current = creature;
+        ManageGrowth();
     }
 
     void Update()
@@ -29,53 +36,61 @@ public class PlayerManager : MonoBehaviour
         Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
         //UI
-        health.value = info.health.health / (info.health.maxHealth * 1f);
-        stamina.value = info.movement.stamina / (info.movement.maxStamina * 1f);
-        thirst.value = info.health.thirst / (info.health.maxThirst * 1f);
-        hunger.value = info.health.hunger / (info.health.maxHunger * 1f);
+        healthSlider.value = health.health / (health.maxHealth * 1f);
+        staminaSlider.value = movement.stamina / (movement.maxStamina * 1f);
+        thirstSlider.value = health.thirst / (health.maxThirst * 1f);
+        hungerSlider.value = health.hunger / (health.maxHunger * 1f);
 
         //Flipping
         if (input.x > 0.01)
         {
             render.flipX = true;
-            info.animater.shadow.flipX = true;
+            animator.shadow.flipX = true;
         }
         else if (input.x < -0.01)
         {
             render.flipX = false;
-            info.animater.shadow.flipX = false;
+            animator.shadow.flipX = false;
         }
 
         //Animations
         ManageAnimations(input);
     }
 
-    internal void Die()
+    public void Die()
     {
-        throw new NotImplementedException();
+        Debug.LogError("YOU DIED");
     }
 
     void ManageAnimations(Vector2 _input)
     {
         bool movingAnims =
-            info.animater.currentAnim == CreatureAnimation.Animations.idle ||
-            info.animater.currentAnim == CreatureAnimation.Animations.run ||
-            info.animater.currentAnim == CreatureAnimation.Animations.walk;
+            animator.currentAnim == CreatureAnimation.Animations.idle ||
+            animator.currentAnim == CreatureAnimation.Animations.run ||
+            animator.currentAnim == CreatureAnimation.Animations.walk;
 
         if (!movingAnims)
             return;
 
-        if (rb.velocity.x + rb.velocity.z > info.creature.walkSpeed + 0.01f || rb.velocity.x + rb.velocity.z < -info.creature.walkSpeed + 0.01f)
+        if (rb.velocity.x + rb.velocity.z > creature.walkSpeed + 0.01f || rb.velocity.x + rb.velocity.z < -creature.walkSpeed + 0.01f)
         {
-            info.animater.currentAnim = CreatureAnimation.Animations.run;
+            animator.currentAnim = CreatureAnimation.Animations.run;
         }
-        else if (rb.velocity.x + rb.velocity.z > info.creature.walkSpeed / 8f || rb.velocity.x + rb.velocity.z < -info.creature.walkSpeed / 8f)
+        else if (rb.velocity.x + rb.velocity.z > creature.walkSpeed / 8f || rb.velocity.x + rb.velocity.z < -creature.walkSpeed / 8f)
         {
-            info.animater.currentAnim = CreatureAnimation.Animations.walk;
+            animator.currentAnim = CreatureAnimation.Animations.walk;
         }
         else
         {
-            info.animater.currentAnim = CreatureAnimation.Animations.idle;
+            animator.currentAnim = CreatureAnimation.Animations.idle;
         }
+    }
+
+    public void ManageGrowth()
+    {
+        float size = ((growth.currentPercent / 2f) + 50f) / 100f;
+
+        transform.localScale = size * Vector3.one;
+        follow.ZoomOffset = new Vector3(0f, size, -size);
     }
 }

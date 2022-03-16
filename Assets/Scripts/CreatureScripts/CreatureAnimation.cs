@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CreatureAnimation : MonoBehaviour
 {
-    Info info;
     public enum Animations { idle, walk, run, jump, glide, fly, rest, sleep, eat, drink, LMB, RMB, limp, death }
     public enum Directions { Side, Front, Back }
 
@@ -18,7 +17,6 @@ public class CreatureAnimation : MonoBehaviour
 
     void Start()
     {
-        info = (Info)FindObjectOfType(typeof(Info));
         Invoke("Animation", 0.1f);
     }
 

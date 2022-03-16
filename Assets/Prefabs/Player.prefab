@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 3807269786689868396}
   - component: {fileID: 3807269786689868399}
   - component: {fileID: 4896710063740220816}
-  - component: {fileID: 7318897719944211996}
+  - component: {fileID: 8516983211230402260}
   - component: {fileID: 3807269786689868369}
   - component: {fileID: 3807269786689868398}
   m_Layer: 0
@@ -255,10 +255,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3807269786689868369}
-  gc: {fileID: 4480188893203516344}
   moveSpeed: {x: 1, y: 1}
   stamina: 100
   maxStamina: 100
+  jumpForce: 10
+  groundcheckRadius: 0.01
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  groundcheck: {fileID: 6846843204292761304}
+  onGround: 0
 --- !u!114 &3807269786689868399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,12 +277,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150b37a6435ddcf45838d00b9125f40f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  creature: {fileID: 11400000, guid: 22e9af58369fa094cb309a3e1fb67a4e, type: 2}
+  movement: {fileID: 3807269786689868396}
+  animator: {fileID: 3807269784863294795}
+  health: {fileID: 4896710063740220816}
+  growth: {fileID: 8516983211230402260}
+  follow: {fileID: 0}
   rb: {fileID: 3807269786689868369}
   render: {fileID: 3807269784863294793}
-  health: {fileID: 0}
-  stamina: {fileID: 0}
-  thirst: {fileID: 0}
-  hunger: {fileID: 0}
+  healthSlider: {fileID: 0}
+  staminaSlider: {fileID: 0}
+  thirstSlider: {fileID: 0}
+  hungerSlider: {fileID: 0}
 --- !u!114 &4896710063740220816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,7 +308,22 @@ MonoBehaviour:
   thirst: 100
   maxThirst: 100
   Ailments: 
---- !u!114 &7318897719944211996
+  DeathFunction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3807269786689868399}
+        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8516983211230402260
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -305,14 +332,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 3807269786689868394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a467170a2355982488b21600e28f18bc, type: 3}
+  m_Script: {fileID: 11500000, guid: db6b2c98c05b80d46b99b82303d73f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  creature: {fileID: 11400000, guid: 22e9af58369fa094cb309a3e1fb67a4e, type: 2}
-  movement: {fileID: 3807269786689868396}
-  animater: {fileID: 3807269784863294795}
-  manager: {fileID: 3807269786689868399}
-  health: {fileID: 4896710063740220816}
+  stage: 0
+  currentPercent: 10
+  hatchling: 10
+  baby: 30
+  juvenile: 50
+  subadult: 80
+  adult: 100
+  elder: 90
+  GrowFunction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3807269786689868399}
+        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
+        m_MethodName: Grow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  DieFunction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3807269786689868399}
+        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!54 &3807269786689868369
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -352,7 +412,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6846843204292761304}
   - component: {fileID: 5561225629698836434}
-  - component: {fileID: 4480188893203516344}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -387,16 +446,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.01, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4480188893203516344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5818347919558946163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26152e6677f94b74a9b58b5548b47e73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onGround: 1

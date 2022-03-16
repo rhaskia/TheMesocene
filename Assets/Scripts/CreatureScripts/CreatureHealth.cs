@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CreatureHealth : MonoBehaviour
 {
-    Info info;
 
-    //health
+    [Header("Health")]
     public int health;
     public int maxHealth;
 
-    //hunger
+    [Header("Hunger")]
     public int hunger;
     public int maxHunger;
 
-    //thirst
+    [Header("Thirst")]
     public int thirst;
     public int maxThirst;
 
@@ -23,25 +23,26 @@ public class CreatureHealth : MonoBehaviour
     public enum Ailment { brokenBone, thirsty, hungry, bleeding, drowning, sick, poisoned, envemonated, frostbitten, concussed, lacerated, tranquilized }
     public Ailment[] Ailments;
 
-    void Start()
-    {
-        info = FindObjectOfType<Info>();
-    }
+    public UnityEvent DeathFunction = new UnityEvent();
+
 
     void Update()
     {
         //Check Health
         if (health == 0)
         {
-            info.manager.Die();//player mananger die;
+            DeathFunction.Invoke();
         }
     }
 
     public void TakeDamage(int damage)
     {
-        int DMG = Mathf.Clamp(damage, 0, health);
+        health -= Mathf.Clamp(damage, 0, health);
+    }
 
-        health -= DMG;
+    public void HealDamage(int heal)
+    {
+        health += Mathf.Clamp(heal, 0, maxHealth);
     }
 
     public void GiveAilment(Ailment ailment)

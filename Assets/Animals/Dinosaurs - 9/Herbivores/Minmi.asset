@@ -15,6 +15,7 @@ MonoBehaviour:
   sneakSpeed: 0.5
   walkSpeed: 1
   runSpeed: 2
+  size: 1
   walkAnimSide:
   - {fileID: -7949542318723957242, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
   - {fileID: -2187446991431690454, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}

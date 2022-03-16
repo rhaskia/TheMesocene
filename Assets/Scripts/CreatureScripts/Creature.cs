@@ -10,6 +10,8 @@ public class Creature : ScriptableObject
     public float walkSpeed = 1;
     public float runSpeed = 2;
 
+    public int size = 1;
+
     public Sprite[] walkAnimSide;
     public Sprite[] walkAnimFront;
     public Sprite[] walkAnimBack;

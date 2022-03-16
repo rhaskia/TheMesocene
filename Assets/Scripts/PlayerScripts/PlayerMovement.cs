@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Relations")]
-    Info info;
+    PlayerManager playerM;
     public Rigidbody rb;
 
     [Header("Variables")]
@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
-        info = FindObjectOfType<Info>();
+        playerM = FindObjectOfType<PlayerManager>();
     }
 
     private void OnDestroy()
@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 speed = new Vector3(input.normalized.x * moveSpeed.x, 0, input.normalized.y * moveSpeed.y);
 
         //Applying Input
-        rb.velocity = speed * speedMult;
+        rb.velocity = speed * speedMult * ((playerM.growth.currentPercent / 2f) + 50f) / 100f;
 
         //Stamina
         stamina++;
@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
             stamina -= 3;
             if (stamina > 10)
             {
-                return info.creature.runSpeed;
+                return playerM.creature.runSpeed;
             }
         }
         //Trotting
@@ -66,18 +66,18 @@ public class PlayerMovement : MonoBehaviour
             stamina -= 2;
             if (stamina > 10)
             {
-                return ((info.creature.runSpeed - info.creature.walkSpeed) / 2) + info.creature.walkSpeed;
+                return ((playerM.creature.runSpeed - playerM.creature.walkSpeed) / 2) + playerM.creature.walkSpeed;
             }
         }
 
         //Sneaking
         else if (Input.GetKey(KeyCode.LeftControl))
         {
-            return info.creature.sneakSpeed;
+            return playerM.creature.sneakSpeed;
         }
 
         //Walking
-        return info.creature.walkSpeed;
+        return playerM.creature.walkSpeed;
     }
 
     private void OnGameStateChanged(GameState newGameState)
@@ -97,7 +97,5 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-
-
-
 }
+
