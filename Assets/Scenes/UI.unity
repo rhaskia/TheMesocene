@@ -1725,6 +1725,10 @@ PrefabInstance:
       propertyPath: GrowFunctionScript
       value: 
       objectReference: {fileID: 635672603}
+    - target: {fileID: 8516983211230402260, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: GrowFunction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ManageGrowth
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5561225629698836434, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
     - {fileID: 7318897719944211996, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
