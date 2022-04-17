@@ -59,24 +59,28 @@ public class PlayerManager : MonoBehaviour
 
     public void Die()
     {
+        //YOU DIED
         Debug.LogError("YOU DIED");
     }
 
     void ManageAnimations(Vector2 _input)
     {
+        //idk
         bool movingAnims =
             animator.currentAnim == CreatureAnimation.Animations.idle ||
             animator.currentAnim == CreatureAnimation.Animations.run ||
             animator.currentAnim == CreatureAnimation.Animations.walk;
 
+        //If not animating movement
         if (!movingAnims)
             return;
 
-        if (rb.velocity.x + rb.velocity.z > creature.walkSpeed + 0.01f || rb.velocity.x + rb.velocity.z < -creature.walkSpeed + 0.01f)
+        //Animations
+        if (rb.velocity.x + rb.velocity.z > creature.walkSpeed.speed + 0.01f || rb.velocity.x + rb.velocity.z < -creature.walkSpeed.speed + 0.01f)
         {
             animator.currentAnim = CreatureAnimation.Animations.run;
         }
-        else if (rb.velocity.x + rb.velocity.z > creature.walkSpeed / 8f || rb.velocity.x + rb.velocity.z < -creature.walkSpeed / 8f)
+        else if (rb.velocity.x + rb.velocity.z > creature.walkSpeed.speed / 8f || rb.velocity.x + rb.velocity.z < -creature.walkSpeed.speed / 8f)
         {
             animator.currentAnim = CreatureAnimation.Animations.walk;
         }
@@ -86,13 +90,12 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    //Growth idk i like the green
     public void ManageGrowth()
     {
         float size = ((growth.currentPercent / 2f) + 50f) / 100f;
 
         transform.localScale = size * Vector3.one;
         follow.ZoomOffset = new Vector3(0f, size, -size);
-
-
     }
 }

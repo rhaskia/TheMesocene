@@ -556,7 +556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2308996706790695229, guid: 370451884eac9d34f87f914c4b14965c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2541837461497566200, guid: 370451884eac9d34f87f914c4b14965c, type: 3}
       propertyPath: num
@@ -858,7 +858,8 @@ PrefabInstance:
       propertyPath: num
       value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8132562034670926436, guid: 370451884eac9d34f87f914c4b14965c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 370451884eac9d34f87f914c4b14965c, type: 3}
 --- !u!224 &109788977 stripped
 RectTransform:
@@ -2108,10 +2109,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3807269784863294793, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: m_Size.x
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3807269784863294793, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: m_Size.y
+      value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3807269784863294793, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7949542318723957242, guid: dab5a546c02df2947b43a3cf41b76a69, type: 3}
+    - target: {fileID: 3807269784863294793, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3807269784863294795, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
       propertyPath: current
       value: 
       objectReference: {fileID: 11400000, guid: 22e9af58369fa094cb309a3e1fb67a4e, type: 2}
+    - target: {fileID: 3807269784863294795, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3807269786689868394, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2200,6 +2221,10 @@ PrefabInstance:
       propertyPath: stamina
       value: 
       objectReference: {fileID: 109788978}
+    - target: {fileID: 3807269786689868399, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: creature
+      value: 
+      objectReference: {fileID: 11400000, guid: c47be2ba7d1ca014ca991a86141a3765, type: 2}
     - target: {fileID: 3807269786689868399, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
       propertyPath: healthSlider
       value: 

@@ -10,12 +10,20 @@ public class AnimationBundle
     public bool can;
 }
 
+[System.Serializable]
+public class Movement
+{
+    public float speed;
+    public float staminaUse;
+    public float minStamina = 10;
+    public KeyCode key;
+    public float disturbance; //for sneaking etc
+}
+
 [CreateAssetMenu(fileName = "Critter")]
 public class Creature : ScriptableObject
 {
-    public float sneakSpeed = 0.5f;
-    public float walkSpeed = 1;
-    public float runSpeed = 2;
+    public Movement sneakSpeed, walkSpeed, trotSpeed, runSpeed;
 
     public int size = 1;
 

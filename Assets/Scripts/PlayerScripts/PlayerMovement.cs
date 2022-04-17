@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundcheck;
     public bool onGround;
 
+    Creature creature;
+
     private void Awake()
     {
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
@@ -43,6 +45,19 @@ public class PlayerMovement : MonoBehaviour
         //Stamina
         stamina++;
         stamina = Mathf.Clamp(stamina, 0, maxStamina);
+
+        creature = playerM.creature;
+    }
+    void Update()
+    {
+        //Groundcheck
+        onGround = Physics.OverlapSphere(groundcheck.position, groundcheckRadius, groundLayer).Length != 0;
+
+        //Jumping
+        if (onGround && Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(new Vector3(rb.velocity.x, jumpForce, rb.velocity.z), ForceMode.Impulse);
+        }
     }
 
     public float GetSpeed()
@@ -52,32 +67,21 @@ public class PlayerMovement : MonoBehaviour
             return 0.5f;
 
         //Running
-        if (Input.GetKey(KeyCode.LeftShift))
+        Movement[] movements = new Movement[] { creature.sneakSpeed, creature.trotSpeed, creature.runSpeed };
+        foreach (var move in movements)
         {
-            stamina -= 3;
-            if (stamina > 10)
+            if (Input.GetKey(move.key))
             {
-                return playerM.creature.runSpeed;
-            }
-        }
-        //Trotting
-        else if (Input.GetKey(KeyCode.Z))
-        {
-            stamina -= 2;
-            if (stamina > 10)
-            {
-                return ((playerM.creature.runSpeed - playerM.creature.walkSpeed) / 2) + playerM.creature.walkSpeed;
+                stamina -= move.staminaUse;
+                if (stamina > move.minStamina)
+                {
+                    return move.speed;
+                }
             }
         }
 
-        //Sneaking
-        else if (Input.GetKey(KeyCode.LeftControl))
-        {
-            return playerM.creature.sneakSpeed;
-        }
-
-        //Walking
-        return playerM.creature.walkSpeed;
+        stamina -= creature.walkSpeed.staminaUse;
+        return creature.walkSpeed.speed;
     }
 
     private void OnGameStateChanged(GameState newGameState)
@@ -85,17 +89,6 @@ public class PlayerMovement : MonoBehaviour
         enabled = newGameState == GameState.GamePlay;
     }
 
-    void Update()
-    {
-        onGround = Physics.OverlapSphere(groundcheck.position, groundcheckRadius, groundLayer).Length != 0;
 
-        if (onGround)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                rb.AddForce(new Vector3(rb.velocity.x, jumpForce, rb.velocity.z), ForceMode.Impulse);
-            }
-        }
-    }
 }
 

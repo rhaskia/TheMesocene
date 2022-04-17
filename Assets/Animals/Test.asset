@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b2e271b7ff82a408599ba51ef93ecf, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  sneakSpeed:
+    speed: 0.5
+    staminaUse: 0.5
+    minStamina: 10
+    key: 306
+    disturbance: 0
+  walkSpeed:
+    speed: 1
+    staminaUse: 1
+    minStamina: 10
+    key: 0
+    disturbance: 0
+  trotSpeed:
+    speed: 1.5
+    staminaUse: 2
+    minStamina: 10
+    key: 122
+    disturbance: 0
+  runSpeed:
+    speed: 2
+    staminaUse: 4
+    minStamina: 10
+    key: 304
+    disturbance: 0
+  size: 1
+  idle:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  walk:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  run:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  jump:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  glide:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  fly:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  rest:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  sleep:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  eat:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  drink:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  lmb:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  rmb:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  limp:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  death:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  dead: {fileID: 0}
