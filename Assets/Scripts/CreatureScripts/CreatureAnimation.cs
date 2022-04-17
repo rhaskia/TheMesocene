@@ -22,94 +22,34 @@ public class CreatureAnimation : MonoBehaviour
 
     void Animation()
     {
-        switch (currentAnim)
-        {
-            case Animations.idle:
-                AnimationSet(current.idleAnimSide, current.idleAnimFront, current.idleAnimBack);
-                Invoke("Animation", current.idleAnimSpeed);
-                break;
-            case Animations.walk:
-                AnimationSet(current.walkAnimSide, current.walkAnimFront, current.walkAnimBack);
-                Invoke("Animation", current.walkAnimSpeed);
-                break;
-            case Animations.run:
-                AnimationSet(current.runAnimSide, current.runAnimFront, current.runAnimBack);
-                Invoke("Animation", current.runAnimSpeed);
-                break;
-            case Animations.jump:
-                AnimationSet(current.jumpAnimSide, current.jumpAnimFront, current.jumpAnimBack);
-                Invoke("Animation", current.jumpAnimSpeed);
-                break;
-            case Animations.glide:
-                AnimationSet(current.glideAnimSide, current.glideAnimFront, current.glideAnimBack);
-                Invoke("Animation", current.glideAnimSpeed);
-                break;
-            case Animations.fly:
-                AnimationSet(current.flyAnimSide, current.flyAnimFront, current.flyAnimBack);
-                Invoke("Animation", current.flyAnimSpeed);
-                break;
-            case Animations.rest:
-                AnimationSet(current.restAnimSide, current.restAnimFront, current.restAnimBack);
-                Invoke("Animation", current.restAnimSpeed);
-                break;
-            case Animations.sleep://i need sleep
-                AnimationSet(current.sleepAnimSide, current.sleepAnimFront, current.sleepAnimBack);
-                Invoke("Animation", current.sleepAnimSpeed);
-                break;
-            case Animations.eat:
-                AnimationOneTime(current.eatAnimSide, current.eatAnimFront, current.eatAnimBack);
-                Invoke("Animation", current.eatAnimSpeed);
-                break;
-            case Animations.drink:
-                AnimationOneTime(current.drinkAnimSide, current.drinkAnimFront, current.drinkAnimBack);
-                Invoke("Animation", current.drinkAnimSpeed);
-                break;
-            case Animations.LMB:
-                AnimationSet(current.LMBAnimSide, current.LMBAnimFront, current.LMBAnimBack);
-                Invoke("Animation", current.LMBAnimSpeed);
-                break;
-            case Animations.RMB:
-                AnimationSet(current.RMBAnimSide, current.RMBAnimFront, current.RMBAnimBack);
-                Invoke("Animation", current.RMBAnimSpeed);
-                break;
-            case Animations.limp:
-                AnimationSet(current.limpAnimSide, current.limpAnimFront, current.limpAnimBack);
-                Invoke("Animation", current.limpAnimSpeed);
-                break;
-            case Animations.death:
-                AnimationSet(current.deathAnimSide, current.deathAnimFront, current.deathAnimBack);
-                Invoke("Animation", current.deathAnimSpeed);
-                break;
-
-        }
-
+        var allAnims = new AnimationBundle[] { current.idle, current.walk, current.run, current.jump, current.glide, current.fly, current.rest, current.sleep, current.eat, current.drink, current.lmb, current.rmb, current.limp, current.death };
+        AnimationSet(allAnims[((int)currentAnim)]);
     }
 
-    void AnimationSet(Sprite[] side, Sprite[] front, Sprite[] back)
+    void AnimationSet(AnimationBundle anim)
     {
         switch (currentDir)
         {
             case Directions.Side:
-                if (currentFrame >= side.Length)
+                if (currentFrame >= anim.side.Length)
                 { currentFrame = 0; }
-                spriteRenderer.sprite = side[currentFrame];
-                shadow.sprite = side[currentFrame];
+                spriteRenderer.sprite = anim.side[currentFrame];
+                shadow.sprite = anim.side[currentFrame];
                 break;
             case Directions.Front:
-                if (currentFrame >= front.Length)
+                if (currentFrame >= anim.front.Length)
                 { currentFrame = 0; }
-                spriteRenderer.sprite = front[currentFrame];
-                shadow.sprite = front[currentFrame];
+                spriteRenderer.sprite = anim.front[currentFrame];
+                shadow.sprite = anim.front[currentFrame];
                 break;
             case Directions.Back:
-                if (currentFrame >= back.Length)
+                if (currentFrame >= anim.back.Length)
                 { currentFrame = 0; }
-                spriteRenderer.sprite = back[currentFrame];
-                shadow.sprite = back[currentFrame];
+                spriteRenderer.sprite = anim.back[currentFrame];
+                shadow.sprite = anim.back[currentFrame];
                 break;
         }
         currentFrame++;
-
     }
 
     void AnimationOneTime(Sprite[] side, Sprite[] front, Sprite[] back)

@@ -92,5 +92,7 @@ public class PlayerManager : MonoBehaviour
 
         transform.localScale = size * Vector3.one;
         follow.ZoomOffset = new Vector3(0f, size, -size);
+
+
     }
 }
