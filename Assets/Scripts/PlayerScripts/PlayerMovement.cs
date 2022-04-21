@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     Creature creature;
 
-    bool flying;
+    public bool flying;
 
     private void Awake()
     {
@@ -42,7 +42,8 @@ public class PlayerMovement : MonoBehaviour
         float speedMult = GetSpeed(input.normalized.x + input.normalized.y);
 
         //Applying Input If On Ground
-        if (onGround || flying) rb.velocity = speed * speedMult * ((playerM.growth.currentPercent / 2f) + 50f) / 100f;
+        Vector3 i = speed * speedMult * ((playerM.growth.currentPercent / 2f) + 50f) / 100f;
+        if (onGround || flying) rb.velocity = new Vector3(i.x, rb.velocity.y, i.z);
 
         //Stamina
         stamina++;
@@ -62,8 +63,18 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Flying
-        if (!onGround && Input.GetKey(KeyCode.Space)) rb.AddForce(new Vector3(0, 0.1f, 0), ForceMode.Impulse);
+        if (!onGround && Input.GetKeyDown(KeyCode.Space)) flying = true;
+        if (onGround) flying = false;
 
+        if (flying)
+        {
+            rb.velocity = Vector3.Lerp(rb.velocity, Vector3.zero, 0.9f);
+
+            if (Input.GetKeyDown(KeyCode.Space)) rb.AddForce(new Vector3(0, 0.1f, 0), ForceMode.Impulse);
+            if (Input.GetKeyDown(KeyCode.C)) rb.AddForce(new Vector3(0, -0.1f, 0), ForceMode.Impulse);
+        }
+
+        rb.useGravity = !flying;
     }
 
     public float GetSpeed(float input)
