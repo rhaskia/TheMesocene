@@ -2131,11 +2131,15 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 22e9af58369fa094cb309a3e1fb67a4e, type: 2}
     - target: {fileID: 3807269784863294795, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3807269786689868394, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3807269786689868396, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: jumpForce
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3807269786689868396, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
       propertyPath: moveSpeed.x
@@ -2224,7 +2228,7 @@ PrefabInstance:
     - target: {fileID: 3807269786689868399, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
       propertyPath: creature
       value: 
-      objectReference: {fileID: 11400000, guid: c47be2ba7d1ca014ca991a86141a3765, type: 2}
+      objectReference: {fileID: 11400000, guid: 83f628723f8c5184fac575056bbc3a1d, type: 2}
     - target: {fileID: 3807269786689868399, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
       propertyPath: healthSlider
       value: 
@@ -3267,7 +3271,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 46e82b6826dcfa54283a3a76d6e4fbd6, type: 2}
+  - {fileID: 2100000, guid: a2d8e7404b093e747b5b8a38ac845563, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

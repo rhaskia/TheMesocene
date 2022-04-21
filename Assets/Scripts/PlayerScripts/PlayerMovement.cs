@@ -20,10 +20,13 @@ public class PlayerMovement : MonoBehaviour
 
     Creature creature;
 
+    bool flying;
+
     private void Awake()
     {
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
         playerM = FindObjectOfType<PlayerManager>();
+        creature = playerM.creature;
     }
 
     private void OnDestroy()
@@ -34,13 +37,12 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         //Input
-        float speedMult = GetSpeed();
-
         Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         Vector3 speed = new Vector3(input.normalized.x * moveSpeed.x, 0, input.normalized.y * moveSpeed.y);
+        float speedMult = GetSpeed(input.normalized.x + input.normalized.y);
 
-        //Applying Input
-        rb.velocity = speed * speedMult * ((playerM.growth.currentPercent / 2f) + 50f) / 100f;
+        //Applying Input If On Ground
+        if (onGround || flying) rb.velocity = speed * speedMult * ((playerM.growth.currentPercent / 2f) + 50f) / 100f;
 
         //Stamina
         stamina++;
@@ -56,18 +58,22 @@ public class PlayerMovement : MonoBehaviour
         //Jumping
         if (onGround && Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(new Vector3(rb.velocity.x, jumpForce, rb.velocity.z), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
         }
+
+        //Flying
+        if (!onGround && Input.GetKey(KeyCode.Space)) rb.AddForce(new Vector3(0, 0.1f, 0), ForceMode.Impulse);
+
     }
 
-    public float GetSpeed()
+    public float GetSpeed(float input)
     {
         //If In Menu, Dont Move
-        if (!onGround)
-            return 0.5f;
 
-        //Running
+        //Running etc
+        print(creature == null);
         Movement[] movements = new Movement[] { creature.sneakSpeed, creature.trotSpeed, creature.runSpeed };
+
         foreach (var move in movements)
         {
             if (Input.GetKey(move.key))
@@ -80,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        stamina -= creature.walkSpeed.staminaUse;
+        if (input > 0.1f) stamina -= creature.walkSpeed.staminaUse;
         return creature.walkSpeed.speed;
     }
 

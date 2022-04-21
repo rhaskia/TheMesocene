@@ -24,10 +24,14 @@ public class CreatureAnimation : MonoBehaviour
     {
         var allAnims = new AnimationBundle[] { current.idle, current.walk, current.run, current.jump, current.glide, current.fly, current.rest, current.sleep, current.eat, current.drink, current.lmb, current.rmb, current.limp, current.death };
         AnimationSet(allAnims[((int)currentAnim)]);
+
+        Invoke("Animation", 0.1f);
     }
 
     void AnimationSet(AnimationBundle anim)
     {
+        print("aaaaaaaaaaaaaaaaaaaaa");
+        currentFrame++;
         switch (currentDir)
         {
             case Directions.Side:
@@ -49,7 +53,6 @@ public class CreatureAnimation : MonoBehaviour
                 shadow.sprite = anim.back[currentFrame];
                 break;
         }
-        currentFrame++;
     }
 
     void AnimationOneTime(Sprite[] side, Sprite[] front, Sprite[] back)

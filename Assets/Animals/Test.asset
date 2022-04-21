@@ -19,19 +19,19 @@ MonoBehaviour:
     key: 306
     disturbance: 0
   walkSpeed:
-    speed: 1
+    speed: 1.5
     staminaUse: 1
     minStamina: 10
     key: 0
     disturbance: 0
   trotSpeed:
-    speed: 1.5
+    speed: 2
     staminaUse: 2
     minStamina: 10
     key: 122
     disturbance: 0
   runSpeed:
-    speed: 2
+    speed: 3
     staminaUse: 4
     minStamina: 10
     key: 304
