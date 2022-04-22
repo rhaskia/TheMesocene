@@ -16,7 +16,6 @@ public class Movement
     public float speed;
     public float staminaUse;
     public float minStamina = 10;
-    public KeyCode key;
     public float disturbance; //for sneaking etc
 }
 

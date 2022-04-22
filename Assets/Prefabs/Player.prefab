@@ -265,6 +265,7 @@ MonoBehaviour:
     m_Bits: 128
   groundcheck: {fileID: 3607626926244573329}
   onGround: 0
+  flying: 0
 --- !u!114 &3807269786689868399
 MonoBehaviour:
   m_ObjectHideFlags: 0

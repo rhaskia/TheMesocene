@@ -18,9 +18,13 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundcheck;
     public bool onGround;
 
+    [Header("Keys")]
+    public KeyCode trot;
+    public KeyCode run, jump, crouch, fly;
+
     Creature creature;
 
-    public bool flying;
+    public bool crouching, flying;
 
     private void Awake()
     {
@@ -49,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         stamina++;
         stamina = Mathf.Clamp(stamina, 0, maxStamina);
 
+        //idk
         creature = playerM.creature;
     }
     void Update()
@@ -57,45 +62,51 @@ public class PlayerMovement : MonoBehaviour
         onGround = Physics.OverlapSphere(groundcheck.position, groundcheckRadius, groundLayer).Length != 0;
 
         //Jumping
-        if (onGround && Input.GetKeyDown(KeyCode.Space))
+        if (onGround && Input.GetKeyDown(jump))
         {
             rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
         }
 
         //Flying
-        if (!onGround && Input.GetKeyDown(KeyCode.Space)) flying = true;
+        if (!onGround && Input.GetKeyDown(fly)) flying = !flying;
         if (onGround) flying = false;
 
         if (flying)
         {
-            rb.velocity = Vector3.Lerp(rb.velocity, Vector3.zero, 0.9f);
+            rb.velocity = Vector3.Lerp(rb.velocity, Vector3.zero, 0.99f);
 
-            if (Input.GetKeyDown(KeyCode.Space)) rb.AddForce(new Vector3(0, 0.1f, 0), ForceMode.Impulse);
-            if (Input.GetKeyDown(KeyCode.C)) rb.AddForce(new Vector3(0, -0.1f, 0), ForceMode.Impulse);
+            if (Input.GetKey(jump)) rb.AddForce(new Vector3(0, 0.1f, 0), ForceMode.Impulse);
+            if (Input.GetKey(crouch)) rb.AddForce(new Vector3(0, -0.1f, 0), ForceMode.Impulse);
         }
 
         rb.useGravity = !flying;
+
+        //Crouching
+        if (onGround && Input.GetKeyDown(crouch)) crouching = !crouching;
     }
 
     public float GetSpeed(float input)
     {
         //If In Menu, Dont Move
 
-        //Running etc
-        print(creature == null);
-        Movement[] movements = new Movement[] { creature.sneakSpeed, creature.trotSpeed, creature.runSpeed };
-
-        foreach (var move in movements)
+        //Trotting
+        if (Input.GetKey(trot))
         {
-            if (Input.GetKey(move.key))
-            {
-                stamina -= move.staminaUse;
-                if (stamina > move.minStamina)
-                {
-                    return move.speed;
-                }
-            }
+            stamina -= creature.runSpeed.staminaUse;
+            if (stamina > creature.runSpeed.minStamina) return creature.runSpeed.speed;
+            crouching = false;
         }
+
+        //Running
+        if (Input.GetKey(run))
+        {
+            stamina -= creature.runSpeed.staminaUse;
+            if (stamina > creature.runSpeed.minStamina) return creature.runSpeed.speed;
+            crouching = false;
+        }
+
+        //Crouching
+        if (crouching) return creature.sneakSpeed.speed;
 
         if (input > 0.1f) stamina -= creature.walkSpeed.staminaUse;
         return creature.walkSpeed.speed;
@@ -106,6 +117,4 @@ public class PlayerMovement : MonoBehaviour
         enabled = newGameState == GameState.GamePlay;
     }
 
-
 }
-

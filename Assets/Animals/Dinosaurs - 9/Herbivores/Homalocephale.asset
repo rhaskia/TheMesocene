@@ -16,25 +16,21 @@ MonoBehaviour:
     speed: 0.5
     staminaUse: 0
     minStamina: 10
-    key: 306
     disturbance: 0
   walkSpeed:
     speed: 1.5
-    staminaUse: 0
+    staminaUse: 1
     minStamina: 10
-    key: 0
     disturbance: 0
   trotSpeed:
     speed: 2
-    staminaUse: 1
+    staminaUse: 2
     minStamina: 10
-    key: 120
     disturbance: 0
   runSpeed:
     speed: 3
-    staminaUse: 1
+    staminaUse: 3
     minStamina: 10
-    key: 122
     disturbance: 0
   size: 1
   idle:

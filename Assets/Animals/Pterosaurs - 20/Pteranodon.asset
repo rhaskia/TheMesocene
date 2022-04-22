@@ -12,74 +12,143 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b2e271b7ff82a408599ba51ef93ecf, type: 3}
   m_Name: Pteranodon
   m_EditorClassIdentifier: 
-  Icon: {fileID: 0}
-  WalkAnimSide: []
-  WalkAnimFront: []
-  WalkAnimBack: []
-  WalkAnimSpeed: 0
-  RunAnimSide: []
-  RunAnimFront: []
-  RunAnimBack: []
-  RunAnimSpeed: 0
-  canJump: 0
-  JumpAnimSide: []
-  JumpAnimFront: []
-  JumpAnimBack: []
-  JumpAnimSpeed: 0
-  canGlide: 0
-  GlideAnimSide: []
-  GlideAnimFront: []
-  GlideAnimBack: []
-  GlideAnimSpeed: 0
-  canFly: 1
-  FlyAnimSide:
-  - {fileID: -8109903264448047190, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
-  - {fileID: -2785328979842299601, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
-  - {fileID: -5394400559234228832, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
-  - {fileID: 6011061907754716507, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
-  - {fileID: 8846522665100656662, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
-  - {fileID: -6274490937487791250, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
-  - {fileID: -5383988168027819840, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
-  - {fileID: 8763485918973259793, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
-  - {fileID: -8077851669121094078, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
-  - {fileID: 4096444003790339664, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
-  FlyAnimFront: []
-  FlyAnimBack: []
-  FlyAnimSpeed: 0.15
-  RestAnimSide: []
-  RestAnimFront: []
-  RestAnimBack: []
-  RestAnimSpeed: 0
-  SleepAnimSide: []
-  SleepAnimFront: []
-  SleepAnimBack: []
-  SleepAnimSpeed: 0
-  EatAnimSide: []
-  EatAnimFront: []
-  EatAnimBack: []
-  EatAnimSpeed: 0
-  DrinkAnimSide: []
-  DrinkAnimFront: []
-  DrinkAnimBack: []
-  DrinkAnimSpeed: 0
-  LMBAnimSide: []
-  LMBAnimFront: []
-  LMBAnimBack: []
-  LMBAnimSpeed: 0
-  RMBAnimSide: []
-  RMBAnimFront: []
-  RMBAnimBack: []
-  RMBAnimSpeed: 0
-  LimpAnimSide: []
-  LimpAnimFront: []
-  LimpAnimBack: []
-  LimpAnimSpeed: 0
-  DeathAnimSide: []
-  DeathAnimFront: []
-  DeathAnimBack: []
-  DeathAnimSpeed: 0
-  IdleAnimSide: []
-  IdleAnimFront: []
-  IdleAnimBack: []
-  IdleAnimSpeed: 0
-  Dead: {fileID: 0}
+  sneakSpeed:
+    speed: 0.5
+    staminaUse: 0
+    minStamina: 10
+    key: 306
+    disturbance: 0
+  walkSpeed:
+    speed: 1.5
+    staminaUse: 0
+    minStamina: 10
+    key: 0
+    disturbance: 0
+  trotSpeed:
+    speed: 2
+    staminaUse: 0
+    minStamina: 10
+    key: 122
+    disturbance: 0
+  runSpeed:
+    speed: 3
+    staminaUse: 0
+    minStamina: 10
+    key: 304
+    disturbance: 0
+  size: 1
+  idle:
+    side:
+    - {fileID: -8109903264448047190, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: -2785328979842299601, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: -5394400559234228832, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: 6011061907754716507, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: 8846522665100656662, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: -6274490937487791250, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: -5383988168027819840, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: 8763485918973259793, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: -8077851669121094078, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: 4096444003790339664, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    front: []
+    back: []
+    speed: 0.15
+    can: 0
+  walk:
+    side:
+    - {fileID: -8109903264448047190, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: -2785328979842299601, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: -5394400559234228832, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: 6011061907754716507, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: 8846522665100656662, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: -6274490937487791250, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: -5383988168027819840, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: 8763485918973259793, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: -8077851669121094078, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: 4096444003790339664, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    front: []
+    back: []
+    speed: 0.15
+    can: 0
+  run:
+    side:
+    - {fileID: -8109903264448047190, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: -2785328979842299601, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: -5394400559234228832, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: 6011061907754716507, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: 8846522665100656662, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: -6274490937487791250, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: -5383988168027819840, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: 8763485918973259793, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: -8077851669121094078, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    - {fileID: 4096444003790339664, guid: 47a6aed9cb824cf4fab0d138a04626ea, type: 3}
+    front: []
+    back: []
+    speed: 0.15
+    can: 0
+  jump:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  glide:
+    side: []
+    front: []
+    back: []
+    speed: 0.15
+    can: 0
+  fly:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  rest:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  sleep:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  eat:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  drink:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  lmb:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  rmb:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  limp:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  death:
+    side: []
+    front: []
+    back: []
+    speed: 0
+    can: 0
+  dead: {fileID: 0}
