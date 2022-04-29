@@ -100,6 +100,10 @@ MonoBehaviour:
   currentFrame: 0
   spriteRenderer: {fileID: 3807269784863294793}
   shadow: {fileID: 3807269785107172966}
+  shadowDir: {x: 0, y: 0, z: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
   current: {fileID: 11400000, guid: bf734fa1704ff864e849fb9a724ebd84, type: 2}
 --- !u!1 &3807269785107172962
 GameObject:
@@ -214,6 +218,7 @@ GameObject:
   - component: {fileID: 3807269786689868397}
   - component: {fileID: 3807269786689868396}
   - component: {fileID: 3807269786689868399}
+  - component: {fileID: 5675060911620840278}
   - component: {fileID: 4896710063740220816}
   - component: {fileID: 8516983211230402260}
   - component: {fileID: 3807269786689868369}
@@ -254,18 +259,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 708c7a18193c93d4ca244a6af0e2606d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 3807269786689868369}
-  moveSpeed: {x: 1, y: 1}
-  stamina: 100
-  maxStamina: 100
-  jumpForce: 10
-  groundcheckRadius: 0.01
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  groundcheck: {fileID: 3607626926244573329}
-  onGround: 0
-  flying: 0
+  trot: 0
+  run: 0
+  jump: 0
+  crouch: 0
+  glide: 0
+  fly: 0
 --- !u!114 &3807269786689868399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creature: {fileID: 11400000, guid: 22e9af58369fa094cb309a3e1fb67a4e, type: 2}
-  movement: {fileID: 3807269786689868396}
+  movement: {fileID: 0}
   animator: {fileID: 3807269784863294795}
   health: {fileID: 4896710063740220816}
   growth: {fileID: 8516983211230402260}
@@ -290,6 +289,33 @@ MonoBehaviour:
   staminaSlider: {fileID: 0}
   thirstSlider: {fileID: 0}
   hungerSlider: {fileID: 0}
+--- !u!114 &5675060911620840278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3807269786689868394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944f95003c2f29f4a8be59dae6cfd143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 3807269786689868369}
+  stamina: 100
+  maxStamina: 100
+  jumpForce: 2
+  groundcheckRadius: 0.1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  groundcheck: {fileID: 3607626926244573329}
+  onGround: 0
+  creature: {fileID: 11400000, guid: 83f628723f8c5184fac575056bbc3a1d, type: 2}
+  crouching: 0
+  gliding: 0
+  flying: 0
+  maxGlideSpeed: 4
 --- !u!114 &4896710063740220816
 MonoBehaviour:
   m_ObjectHideFlags: 0

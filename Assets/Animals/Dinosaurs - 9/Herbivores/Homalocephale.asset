@@ -12,27 +12,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b2e271b7ff82a408599ba51ef93ecf, type: 3}
   m_Name: Homalocephale
   m_EditorClassIdentifier: 
+  size: 1
   sneakSpeed:
     speed: 0.5
     staminaUse: 0
     minStamina: 10
     disturbance: 0
+    can: 0
   walkSpeed:
     speed: 1.5
     staminaUse: 1
     minStamina: 10
     disturbance: 0
+    can: 0
   trotSpeed:
     speed: 2
     staminaUse: 2
     minStamina: 10
     disturbance: 0
+    can: 0
   runSpeed:
     speed: 3
     staminaUse: 3
     minStamina: 10
     disturbance: 0
-  size: 1
+    can: 0
+  glideSpeed:
+    speed: 4
+    staminaUse: 0
+    minStamina: 10
+    disturbance: 0
+    can: 1
+  flySpeed:
+    speed: 0
+    staminaUse: 0
+    minStamina: 10
+    disturbance: 0
+    can: 1
   idle:
     side:
     - {fileID: -8362079545595208550, guid: 67c0e42384a1f1545b9061e7e4014528, type: 3}
@@ -40,7 +56,6 @@ MonoBehaviour:
     front: []
     back: []
     speed: 0.15
-    can: 0
   walk:
     side:
     - {fileID: -8486851169066328655, guid: 67c0e42384a1f1545b9061e7e4014528, type: 3}
@@ -52,7 +67,6 @@ MonoBehaviour:
     front: []
     back: []
     speed: 0.15
-    can: 0
   run:
     side:
     - {fileID: -8486851169066328655, guid: 67c0e42384a1f1545b9061e7e4014528, type: 3}
@@ -64,71 +78,59 @@ MonoBehaviour:
     front: []
     back: []
     speed: 0.15
-    can: 0
   jump:
     side: []
     front: []
     back: []
     speed: 0
-    can: 0
   glide:
     side: []
     front: []
     back: []
     speed: 0
-    can: 0
   fly:
     side: []
     front: []
     back: []
     speed: 0
-    can: 0
   rest:
     side: []
     front: []
     back: []
     speed: 0
-    can: 0
   sleep:
     side: []
     front: []
     back: []
     speed: 0
-    can: 0
   eat:
     side: []
     front: []
     back: []
     speed: 0
-    can: 0
   drink:
     side: []
     front: []
     back: []
     speed: 0
-    can: 0
   lmb:
     side: []
     front: []
     back: []
     speed: 0
-    can: 0
   rmb:
     side: []
     front: []
     back: []
     speed: 0
-    can: 0
   limp:
     side: []
     front: []
     back: []
     speed: 0
-    can: 0
   death:
     side: []
     front: []
     back: []
     speed: 0
-    can: 0
   dead: {fileID: 0}

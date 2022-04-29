@@ -9,10 +9,10 @@ public class PlayerManager : MonoBehaviour
 {
     [Header("Relations")]
     public Creature creature;
-    public PlayerMovement movement;
+    public Movement movement;
     public CreatureAnimation animator;
-    public CreatureHealth health;
-    public CreatureGrowth growth;
+    public Health health;
+    public Growth growth;
     public CameraFollow follow;
 
     public Rigidbody rb;

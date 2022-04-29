@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,24 +13,36 @@ public class CreatureAnimation : MonoBehaviour
     public int currentFrame;
     public SpriteRenderer spriteRenderer;
     public SpriteRenderer shadow;
+    public Vector3 shadowDir;
+    public LayerMask layerMask;
     public Creature current;
 
     void Start()
     {
-        Invoke("Animation", 0.1f);
+        Invoke("ManageAnimation", 0.1f);
     }
 
-    void Animation()
+    void Update()
+    {
+        //Shadow stuff
+        //Need to make a shader for it really
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(shadowDir), out hit, Mathf.Infinity, layerMask))
+        {
+            shadow.transform.position = hit.point;
+        }
+    }
+
+    void ManageAnimation()
     {
         var allAnims = new AnimationBundle[] { current.idle, current.walk, current.run, current.jump, current.glide, current.fly, current.rest, current.sleep, current.eat, current.drink, current.lmb, current.rmb, current.limp, current.death };
         AnimationSet(allAnims[((int)currentAnim)]);
 
-        Invoke("Animation", 0.1f);
+        Invoke("ManageAnimation", 0.1f);
     }
 
     void AnimationSet(AnimationBundle anim)
     {
-        print("aaaaaaaaaaaaaaaaaaaaa");
         currentFrame++;
         switch (currentDir)
         {

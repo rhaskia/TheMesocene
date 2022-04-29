@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CreatureGrowth : MonoBehaviour
+public class Growth : MonoBehaviour
 {
     public enum GS { hatchling, baby, juvenile, subadult, adult, elder }
     public GS stage;

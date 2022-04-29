@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CreatureHealth : MonoBehaviour
+public class Health : MonoBehaviour
 {
 
     [Header("Health")]

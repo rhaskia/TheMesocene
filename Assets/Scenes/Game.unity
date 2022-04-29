@@ -2142,6 +2142,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3807269784863294795, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: shadowDir.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3807269784863294795, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: shadowDir.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3807269784863294795, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: shadowDir.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3807269784863294795, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3807269786689868394, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2159,8 +2175,16 @@ PrefabInstance:
       value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 3807269786689868396, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: move
+      value: 
+      objectReference: {fileID: 1271593564}
+    - target: {fileID: 3807269786689868396, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
       propertyPath: trot
       value: 306
+      objectReference: {fileID: 0}
+    - target: {fileID: 3807269786689868396, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: glide
+      value: 122
       objectReference: {fileID: 0}
     - target: {fileID: 3807269786689868396, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
       propertyPath: crouch
@@ -2177,6 +2201,10 @@ PrefabInstance:
     - target: {fileID: 3807269786689868396, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
       propertyPath: moveSpeed.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3807269786689868396, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: maxGlideSpeed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3807269786689868397, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
       propertyPath: m_RootOrder
@@ -2259,6 +2287,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 83f628723f8c5184fac575056bbc3a1d, type: 2}
     - target: {fileID: 3807269786689868399, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: movement
+      value: 
+      objectReference: {fileID: 1271593564}
+    - target: {fileID: 3807269786689868399, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 109788981}
@@ -2274,6 +2306,10 @@ PrefabInstance:
       propertyPath: staminaSlider
       value: 
       objectReference: {fileID: 109788980}
+    - target: {fileID: 5675060911620840278, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+      propertyPath: glideEfficieny
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5818347919558946163, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
       propertyPath: m_Icon
       value: 
@@ -2338,6 +2374,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3807269786689868397, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
   m_PrefabInstance: {fileID: 1271593555}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1271593564 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5675060911620840278, guid: 3c00f38f0e5299149be93377d10c9aa7, type: 3}
+  m_PrefabInstance: {fileID: 1271593555}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944f95003c2f29f4a8be59dae6cfd143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1407736515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3277,7 +3324,7 @@ Transform:
   m_GameObject: {fileID: 2104575697}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.000047936897}
   m_LocalPosition: {x: 0, y: -2.6, z: 0}
-  m_LocalScale: {x: 1000, y: 5, z: 5}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1417959219}
   m_RootOrder: 0

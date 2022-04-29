@@ -5,8 +5,8 @@ using UnityEngine;
 public class CreatureManager : MonoBehaviour
 {
     public Creature creature;
-    public CreatureHealth health;
-    public CreatureGrowth growth;
+    public Health health;
+    public Growth growth;
 
     // Start is called before the first frame update
     void Start()

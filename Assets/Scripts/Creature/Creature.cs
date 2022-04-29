@@ -7,24 +7,24 @@ public class AnimationBundle
     public Sprite[] front;
     public Sprite[] back;
     public float speed;
-    public bool can;
 }
 
 [System.Serializable]
-public class Movement
+public class MoveType
 {
     public float speed;
     public float staminaUse;
     public float minStamina = 10;
     public float disturbance; //for sneaking etc
+    public bool can;
 }
 
 [CreateAssetMenu(fileName = "Critter")]
 public class Creature : ScriptableObject
 {
-    public Movement sneakSpeed, walkSpeed, trotSpeed, runSpeed;
+    public float size;
 
-    public int size = 1;
+    public MoveType sneakSpeed, walkSpeed, trotSpeed, runSpeed, glideSpeed, flySpeed;
 
     public AnimationBundle idle, walk, run, jump, glide, fly, rest, sleep, eat, drink, lmb, rmb, limp, death;
 
